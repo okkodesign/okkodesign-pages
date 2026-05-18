@@ -1,0 +1,2129 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>Competitor T1 B2C, analisi maggio 2026, OKKO Design</title>
+  <meta name="description" content="Analisi social media e Meta Ads Library di 5 brand Tier 1 B2C italiani: Puro, SBS Mobile, Cellularline, Celly, Aiino. Documento interno OKKO Design.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: oklch(0.97 0.005 70);
+      --bg-alt: oklch(0.94 0.006 70);
+      --surface: oklch(0.995 0.003 70);
+      --ink: oklch(0.18 0.005 70);
+      --ink-soft: oklch(0.32 0.006 70);
+      --muted: oklch(0.42 0.008 70);
+      --border: oklch(0.86 0.008 70);
+      --border-soft: oklch(0.92 0.006 70);
+      --accent: oklch(0.62 0.16 45);
+      --accent-soft: oklch(0.93 0.04 60);
+      --accent-ink: oklch(0.42 0.14 45);
+
+      --dark-bg: oklch(0.16 0.008 60);
+      --dark-fg: oklch(0.97 0.003 70);
+      --dark-muted: oklch(0.72 0.008 70);
+      --dark-border: oklch(0.28 0.008 60);
+
+      --status-alert: oklch(0.5 0.16 25);
+      --status-alert-bg: oklch(0.96 0.02 30);
+      --status-good: oklch(0.5 0.13 145);
+      --status-good-bg: oklch(0.96 0.03 145);
+      --status-info: oklch(0.5 0.14 240);
+      --status-info-bg: oklch(0.96 0.03 240);
+      --status-warn: oklch(0.5 0.13 75);
+      --status-warn-bg: oklch(0.96 0.04 80);
+
+      --c-puro: oklch(0.55 0.16 255);
+      --c-sbs: oklch(0.55 0.15 150);
+      --c-cellularline: oklch(0.55 0.16 295);
+      --c-celly: oklch(0.6 0.17 30);
+      --c-aiino: oklch(0.6 0.14 210);
+
+      --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+      --ease-out-quart: cubic-bezier(0.5, 1, 0.5, 1);
+
+      --max-w: 1180px;
+      --measure: 65ch;
+
+      --t-100: 100ms;
+      --t-160: 160ms;
+      --t-200: 200ms;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-feature-settings: 'ss01';
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      min-height: 100dvh;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .num-tabular {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      background: var(--ink);
+      color: var(--bg);
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      z-index: 200;
+      transition: top var(--t-160) var(--ease-out);
+    }
+    .skip-link:focus {
+      top: 1rem;
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    a {
+      color: var(--accent-ink);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition: color var(--t-160) var(--ease-out);
+    }
+    a:hover {
+      color: var(--ink);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: oklch(0.97 0.005 70 / 0.92);
+      backdrop-filter: saturate(140%) blur(12px);
+      -webkit-backdrop-filter: saturate(140%) blur(12px);
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .topbar__inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0.85rem clamp(1rem, 3vw, 2rem);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .topbar__brand {
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .topbar__brand-accent { color: var(--accent-ink); }
+    .topbar__nav {
+      margin-left: auto;
+      display: flex;
+      gap: 0.25rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .topbar__nav::-webkit-scrollbar { display: none; }
+    .topbar__link {
+      font-size: 0.8rem;
+      color: var(--ink-soft);
+      text-decoration: none;
+      padding: 0.5rem 0.85rem;
+      border-radius: 6px;
+      white-space: nowrap;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: background var(--t-160) var(--ease-out), color var(--t-160) var(--ease-out);
+    }
+    .topbar__link:hover {
+      color: var(--ink);
+      background: var(--bg-alt);
+    }
+    .topbar__dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .topbar__dot--puro { background: var(--c-puro); }
+    .topbar__dot--sbs { background: var(--c-sbs); }
+    .topbar__dot--cellularline { background: var(--c-cellularline); }
+    .topbar__dot--celly { background: var(--c-celly); }
+    .topbar__dot--aiino { background: var(--c-aiino); }
+
+    main {
+      display: block;
+    }
+
+    .section {
+      padding: clamp(4rem, 9vw, 7rem) clamp(1rem, 3vw, 2rem);
+    }
+    .section--tall {
+      padding: clamp(5rem, 12vw, 9rem) clamp(1rem, 3vw, 2rem);
+    }
+    .section__inner {
+      max-width: var(--max-w);
+      margin-inline: auto;
+    }
+    .section--offset .section__inner {
+      max-width: calc(var(--max-w) - 4rem);
+      margin-left: max(2rem, calc((100vw - var(--max-w)) / 2 + 4rem));
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 1.25rem;
+      height: 1px;
+      background: currentColor;
+      display: inline-block;
+    }
+
+    h1, h2, h3, h4 {
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      text-wrap: balance;
+    }
+
+    .hero {
+      background: var(--dark-bg);
+      color: var(--dark-fg);
+      padding-block: clamp(5rem, 14vw, 9rem);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero__inner {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: clamp(1rem, 3vw, 2rem);
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: clamp(3rem, 6vw, 5rem);
+      align-items: end;
+    }
+    .hero__eyebrow {
+      color: oklch(0.7 0.13 50);
+    }
+    .hero__title {
+      font-size: clamp(2.25rem, 5.5vw, 4.25rem);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      margin-bottom: 1.5rem;
+      max-width: 18ch;
+    }
+    .hero__title em {
+      font-style: normal;
+      color: oklch(0.78 0.13 50);
+    }
+    .hero__lede {
+      font-size: 1.05rem;
+      color: var(--dark-muted);
+      max-width: 52ch;
+      line-height: 1.65;
+    }
+    .hero__meta {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--dark-border);
+    }
+    .hero__meta-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: baseline;
+    }
+    .hero__meta-label {
+      font-size: 0.78rem;
+      color: var(--dark-muted);
+      letter-spacing: 0.04em;
+    }
+    .hero__meta-value {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--dark-fg);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .overview {
+      background: var(--bg);
+    }
+    .overview__head {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: clamp(2rem, 5vw, 4rem);
+      margin-bottom: clamp(3rem, 6vw, 4rem);
+      align-items: end;
+    }
+    .overview__intro {
+      max-width: var(--measure);
+      color: var(--ink-soft);
+      font-size: 1.05rem;
+    }
+    .overview__title {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      max-width: 14ch;
+    }
+
+    .ranking {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--border);
+    }
+    .ranking__row {
+      display: grid;
+      grid-template-columns: minmax(0, 0.4fr) minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, 1.4fr);
+      gap: clamp(1rem, 3vw, 2.5rem);
+      padding: 1.5rem clamp(0.5rem, 2vw, 1.25rem);
+      border-bottom: 1px solid var(--border);
+      align-items: center;
+    }
+    .ranking__row:hover {
+      background: var(--bg-alt);
+    }
+    .ranking__rank {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .ranking__color-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .ranking__brand-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+    }
+    .ranking__brand-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+    .ranking__stat {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .ranking__stat-label {
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .ranking__stat-value {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
+    .ranking__stat-value--zero {
+      color: var(--status-alert);
+    }
+    .ranking__notes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+    .tag {
+      font-size: 0.7rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      background: var(--bg-alt);
+      color: var(--ink-soft);
+      border: 1px solid var(--border);
+      font-weight: 500;
+      white-space: nowrap;
+      line-height: 1.5;
+    }
+    .tag--alert {
+      background: var(--status-alert-bg);
+      color: var(--status-alert);
+      border-color: oklch(0.85 0.07 25);
+    }
+    .tag--good {
+      background: var(--status-good-bg);
+      color: var(--status-good);
+      border-color: oklch(0.84 0.07 145);
+    }
+    .tag--info {
+      background: var(--status-info-bg);
+      color: var(--status-info);
+      border-color: oklch(0.85 0.06 240);
+    }
+    .tag--warn {
+      background: var(--status-warn-bg);
+      color: var(--status-warn);
+      border-color: oklch(0.85 0.07 80);
+    }
+
+    .competitor {
+      padding: clamp(4rem, 9vw, 7rem) clamp(1rem, 3vw, 2rem);
+    }
+    .competitor:nth-of-type(odd) {
+      background: var(--bg);
+    }
+    .competitor:nth-of-type(even) {
+      background: var(--bg-alt);
+    }
+
+    .competitor__inner {
+      max-width: var(--max-w);
+      margin-inline: auto;
+    }
+
+    .competitor__header {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+      gap: clamp(2rem, 5vw, 4rem);
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+      align-items: start;
+    }
+    .competitor__identity {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .competitor__index {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .competitor__index-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+    }
+    .competitor__name {
+      font-size: clamp(2.5rem, 5.5vw, 3.75rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+    }
+    .competitor__name--puro::after { background: var(--c-puro); }
+    .competitor__name--sbs::after { background: var(--c-sbs); }
+    .competitor__name--cellularline::after { background: var(--c-cellularline); }
+    .competitor__name--celly::after { background: var(--c-celly); }
+    .competitor__name--aiino::after { background: var(--c-aiino); }
+
+    .competitor__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      margin-top: 0.5rem;
+    }
+    .competitor__meta dt {
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.15rem;
+    }
+    .competitor__meta dd {
+      font-weight: 600;
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
+    .competitor__meta > div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .competitor__highlight {
+      align-self: stretch;
+    }
+
+    .panel-group {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 1.25rem;
+    }
+    .panel-group--offset .panel-group__left {
+      margin-top: clamp(1.5rem, 4vw, 3rem);
+    }
+    .panel-group--offset .panel-group__right {
+      margin-bottom: clamp(1.5rem, 4vw, 3rem);
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: clamp(1.5rem, 3vw, 2rem);
+    }
+    .panel__head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .panel__title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .panel__chip {
+      font-size: 0.72rem;
+      color: var(--ink-soft);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .figures {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .figure {
+      padding: 0.85rem 0;
+    }
+    .figure__value {
+      font-size: clamp(1.65rem, 4vw, 2.25rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+      display: block;
+    }
+    .figure__value--zero {
+      color: var(--status-alert);
+    }
+    .figure__label {
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-top: 0.4rem;
+      display: block;
+    }
+
+    .data-list {
+      display: grid;
+      gap: 0;
+    }
+    .data-list__row {
+      display: grid;
+      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+      gap: 1rem;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border-soft);
+      align-items: baseline;
+    }
+    .data-list__row:last-child { border-bottom: 0; }
+    .data-list__key {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .data-list__value {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--ink);
+      text-align: right;
+      line-height: 1.45;
+    }
+
+    .finding {
+      border-left: 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.15rem;
+      margin-block: 0.75rem;
+      background: var(--surface);
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+    }
+    .finding__icon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: var(--muted);
+    }
+    .finding__body { flex: 1; min-width: 0; }
+    .finding__label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+    .finding__text {
+      font-size: 0.92rem;
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    .finding--alert {
+      background: var(--status-alert-bg);
+      border-color: oklch(0.85 0.07 25);
+    }
+    .finding--alert .finding__icon { color: var(--status-alert); }
+    .finding--alert .finding__label { color: var(--status-alert); }
+
+    .finding--good {
+      background: var(--status-good-bg);
+      border-color: oklch(0.84 0.07 145);
+    }
+    .finding--good .finding__icon { color: var(--status-good); }
+    .finding--good .finding__label { color: var(--status-good); }
+
+    .finding--info {
+      background: var(--status-info-bg);
+      border-color: oklch(0.85 0.06 240);
+    }
+    .finding--info .finding__icon { color: var(--status-info); }
+    .finding--info .finding__label { color: var(--status-info); }
+
+    .finding--warn {
+      background: var(--status-warn-bg);
+      border-color: oklch(0.85 0.07 80);
+    }
+    .finding--warn .finding__icon { color: var(--status-warn); }
+    .finding--warn .finding__label { color: var(--status-warn); }
+
+    .finding--key {
+      background: var(--accent-soft);
+      border-color: oklch(0.82 0.09 50);
+    }
+    .finding--key .finding__icon { color: var(--accent-ink); }
+    .finding--key .finding__label { color: var(--accent-ink); }
+
+    .ads-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin-top: 1rem;
+    }
+    .ads-table caption {
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: left;
+      padding-bottom: 0.75rem;
+      font-weight: 600;
+    }
+    .ads-table th {
+      text-align: left;
+      padding: 0.5rem 0.75rem 0.5rem 0;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1.5px solid var(--border);
+    }
+    .ads-table td {
+      padding: 0.7rem 0.75rem 0.7rem 0;
+      border-bottom: 1px solid var(--border-soft);
+      color: var(--ink);
+      vertical-align: top;
+    }
+    .ads-table tr:last-child td {
+      border-bottom: 0;
+    }
+    .ads-table .nowrap { white-space: nowrap; }
+    .ads-table .num-tabular { font-variant-numeric: tabular-nums; }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1rem;
+    }
+
+    .comparison {
+      background: var(--dark-bg);
+      color: var(--dark-fg);
+    }
+    .comparison .eyebrow {
+      color: oklch(0.7 0.13 50);
+    }
+    .comparison__head {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: clamp(1rem, 3vw, 2rem);
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .comparison__title {
+      font-size: clamp(1.85rem, 4vw, 2.75rem);
+      font-weight: 700;
+      max-width: 16ch;
+      color: var(--dark-fg);
+    }
+    .comparison__intro {
+      color: var(--dark-muted);
+      max-width: 50ch;
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+    .comparison__table-wrap {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: clamp(1rem, 3vw, 2rem);
+      overflow-x: auto;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .comparison-table caption {
+      caption-side: top;
+      text-align: left;
+      padding-bottom: 1rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--dark-muted);
+    }
+    .comparison-table thead th {
+      padding: 1rem 0.85rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-align: center;
+      color: var(--dark-fg);
+      border-bottom: 1.5px solid var(--dark-border);
+      white-space: nowrap;
+    }
+    .comparison-table thead th:first-child {
+      text-align: left;
+    }
+    .comparison-table tbody th {
+      text-align: left;
+      padding: 0.85rem 0.85rem 0.85rem 0;
+      font-weight: 500;
+      color: var(--dark-muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--dark-border);
+    }
+    .comparison-table tbody td {
+      padding: 0.85rem;
+      text-align: center;
+      color: oklch(0.85 0.005 70);
+      border-bottom: 1px solid var(--dark-border);
+    }
+    .comparison-table tbody tr:hover td,
+    .comparison-table tbody tr:hover th {
+      background: oklch(0.2 0.008 60);
+    }
+    .comparison-table .col-okko {
+      color: oklch(0.78 0.13 50);
+      font-weight: 600;
+    }
+    .comparison-table .v-strong { color: var(--dark-fg); font-weight: 600; }
+    .comparison-table .v-good { color: oklch(0.78 0.13 145); }
+    .comparison-table .v-bad { color: oklch(0.72 0.14 25); }
+    .comparison-table .v-empty { color: oklch(0.5 0.005 70); }
+
+    .insights {
+      background: var(--bg);
+    }
+    .insights__head {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: clamp(1rem, 3vw, 2rem);
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: end;
+    }
+    .insights__title {
+      font-size: clamp(1.85rem, 4vw, 2.75rem);
+      font-weight: 700;
+      max-width: 16ch;
+    }
+    .insights__intro {
+      color: var(--ink-soft);
+      max-width: var(--measure);
+      font-size: 1.05rem;
+    }
+    .insights__list {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: clamp(1rem, 3vw, 2rem);
+      list-style: none;
+      counter-reset: insight;
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--border);
+    }
+    .insight {
+      counter-increment: insight;
+      display: grid;
+      grid-template-columns: minmax(0, 0.18fr) minmax(0, 1fr) minmax(0, 1.4fr);
+      gap: clamp(1rem, 3vw, 2.5rem);
+      padding: clamp(1.5rem, 3vw, 2.25rem) clamp(0.5rem, 2vw, 1rem);
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+    .insight__num::before {
+      content: counter(insight, decimal-leading-zero);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+    .insight__title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+    }
+    .insight__body {
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      max-width: var(--measure);
+    }
+
+    .siteinfo {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem);
+    }
+    .siteinfo__inner {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .siteinfo a {
+      color: var(--ink-soft);
+    }
+
+    @media (max-width: 880px) {
+      .hero__inner,
+      .overview__head,
+      .competitor__header,
+      .insights__head,
+      .panel-group {
+        grid-template-columns: 1fr;
+      }
+      .panel-group--offset .panel-group__left,
+      .panel-group--offset .panel-group__right {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .ranking__row {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .ranking__rank {
+        grid-column: 1 / -1;
+        font-size: 0.85rem;
+      }
+      .ranking__notes {
+        grid-column: 1 / -1;
+      }
+      .insight {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+      }
+      .insight__body {
+        grid-column: 1 / -1;
+      }
+      .figures {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .section--offset .section__inner {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .figures { grid-template-columns: 1fr 1fr; }
+      .data-list__row {
+        grid-template-columns: 1fr;
+        gap: 0.15rem;
+      }
+      .data-list__value { text-align: left; }
+      .ranking__row { grid-template-columns: 1fr; }
+    }
+
+    @media (hover: none) {
+      .ranking__row:hover,
+      .comparison-table tbody tr:hover td,
+      .comparison-table tbody tr:hover th {
+        background: transparent;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media print {
+      .topbar, .skip-link { display: none; }
+      .hero, .comparison { background: white; color: black; }
+      .comparison-table thead th, .comparison-table tbody td,
+      .comparison-table tbody th { color: black; border-color: #ccc; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Salta al contenuto</a>
+
+<header class="topbar" role="banner">
+  <div class="topbar__inner">
+    <a href="#main" class="topbar__brand">
+      <span class="topbar__brand-accent">OKKO</span> Design
+    </a>
+    <nav class="topbar__nav" aria-label="Sezioni del documento">
+      <a class="topbar__link" href="#overview">Panoramica</a>
+      <a class="topbar__link" href="#puro"><span class="topbar__dot topbar__dot--puro" aria-hidden="true"></span>Puro</a>
+      <a class="topbar__link" href="#sbs"><span class="topbar__dot topbar__dot--sbs" aria-hidden="true"></span>SBS</a>
+      <a class="topbar__link" href="#cellularline"><span class="topbar__dot topbar__dot--cellularline" aria-hidden="true"></span>Cellularline</a>
+      <a class="topbar__link" href="#celly"><span class="topbar__dot topbar__dot--celly" aria-hidden="true"></span>Celly</a>
+      <a class="topbar__link" href="#aiino"><span class="topbar__dot topbar__dot--aiino" aria-hidden="true"></span>Aiino</a>
+      <a class="topbar__link" href="#comparison">Confronto</a>
+      <a class="topbar__link" href="#insights">Letture</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__inner">
+    <div>
+      <p class="eyebrow hero__eyebrow">Ricerca interna, maggio 2026</p>
+      <h1 class="hero__title" id="hero-title">
+        Competitor <em>T1 B2C</em>, accessori smartphone.
+      </h1>
+      <p class="hero__lede">
+        Cinque brand italiani Tier 1 al microscopio: social media e Meta Ads Library.
+        Dati raccolti via Playwright MCP il 17 maggio 2026. Documento di lavoro,
+        circolazione interna.
+      </p>
+    </div>
+    <dl class="hero__meta">
+      <div class="hero__meta-row">
+        <dt class="hero__meta-label">Brand analizzati</dt>
+        <dd class="hero__meta-value">5</dd>
+      </div>
+      <div class="hero__meta-row">
+        <dt class="hero__meta-label">Follower Instagram totali</dt>
+        <dd class="hero__meta-value">85,3K</dd>
+      </div>
+      <div class="hero__meta-row">
+        <dt class="hero__meta-label">Ads Meta IT monitorate</dt>
+        <dd class="hero__meta-value">30</dd>
+      </div>
+      <div class="hero__meta-row">
+        <dt class="hero__meta-label">Brand senza ads ufficiali</dt>
+        <dd class="hero__meta-value">2</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+
+<section id="overview" class="section overview" aria-labelledby="overview-title">
+  <div class="section__inner">
+    <div class="overview__head">
+      <div>
+        <p class="eyebrow">Panoramica</p>
+        <h2 class="overview__title" id="overview-title">
+          I cinque brand, in ordine di follower Instagram.
+        </h2>
+      </div>
+      <p class="overview__intro">
+        Cellularline guida sui follower, ma su Meta non investe. Puro fa il volume di ads
+        più alto del gruppo. Aiino è competitor di posizionamento, non di pressione paid.
+      </p>
+    </div>
+
+    <ol class="ranking" aria-label="Classifica competitor per follower Instagram">
+
+      <li class="ranking__row">
+        <span class="ranking__rank">
+          <span class="ranking__color-dot" style="background: var(--c-cellularline);" aria-hidden="true"></span>
+          01
+        </span>
+        <div>
+          <p class="ranking__brand-name">Cellularline</p>
+          <p class="ranking__brand-meta">Reggio Emilia, 1990, capogruppo</p>
+        </div>
+        <div class="ranking__stat">
+          <span class="ranking__stat-label">Follower IG</span>
+          <span class="ranking__stat-value">27,7K</span>
+        </div>
+        <div class="ranking__stat">
+          <span class="ranking__stat-label">Ads Meta IT</span>
+          <span class="ranking__stat-value ranking__stat-value--zero">0</span>
+        </div>
+        <div class="ranking__notes" style="grid-column: 1 / -1;">
+          <span class="tag tag--alert">Zero ads ufficiali</span>
+          <span class="tag">Scenario-led</span>
+          <span class="tag">Aspirational</span>
+        </div>
+      </li>
+
+      <li class="ranking__row">
+        <span class="ranking__rank">
+          <span class="ranking__color-dot" style="background: var(--c-puro);" aria-hidden="true"></span>
+          02
+        </span>
+        <div>
+          <p class="ranking__brand-name">Puro</p>
+          <p class="ranking__brand-meta">Modena, 2002, Gruppo SBS</p>
+        </div>
+        <div class="ranking__stat">
+          <span class="ranking__stat-label">Follower IG</span>
+          <span class="ranking__stat-value">27,4K</span>
+        </div>
+        <div class="ranking__stat">
+          <span class="ranking__stat-label">Ads Meta IT</span>
+          <span class="ranking__stat-value">17</span>
+        </div>
+        <div class="ranking__notes" style="grid-column: 1 / -1;">
+          <span class="tag tag--good">Influencer</span>
+          <span class="tag tag--good">UTM granulare</span>
+          <span class="tag tag--warn">Solo Apple</span>
+        </div>
+      </li>
+
+      <li class="ranking__row">
+        <span class="ranking__rank">
+          <span class="ranking__color-dot" style="background: var(--c-sbs);" aria-hidden="true"></span>
+          03
+        </span>
+        <div>
+          <p class="ranking__brand-name">SBS Mobile</p>
+          <p class="ranking__brand-meta">Miasino, 1994, capogruppo SBS</p>
+        </div>
+        <div class="ranking__stat">
+          <span class="ranking__stat-label">Follower IG</span>
+          <span class="ranking__stat-value">15,5K</span>
+        </div>
+        <div class="ranking__stat">
+          <span class="ranking__stat-label">Ads Meta IT</span>
+          <span class="ranking__stat-value">6</span>
+        </div>
+        <div class="ranking__notes" style="grid-column: 1 / -1;">
+          <span class="tag">Lead gen email</span>
+          <span class="tag">Tono tecnico</span>
+        </div>
+      </li>
+
+      <li class="ranking__row">
+        <span class="ranking__rank">
+          <span class="ranking__color-dot" style="background: var(--c-celly);" aria-hidden="true"></span>
+          04
+        </span>
+        <div>
+          <p class="ranking__brand-name">Celly</p>
+          <p class="ranking__brand-meta">Vimercate, 1998, Gruppo Esprinet</p>
+        </div>
+        <div class="ranking__stat">
+          <span class="ranking__stat-label">Follower IG</span>
+          <span class="ranking__stat-value">12,9K</span>
+        </div>
+        <div class="ranking__stat">
+          <span class="ranking__stat-label">Ads Meta IT</span>
+          <span class="ranking__stat-value">7</span>
+        </div>
+        <div class="ranking__notes" style="grid-column: 1 / -1;">
+          <span class="tag">Profile growth</span>
+          <span class="tag">Pun-driven</span>
+          <span class="tag tag--good">Bilingue IT/EN</span>
+        </div>
+      </li>
+
+      <li class="ranking__row">
+        <span class="ranking__rank">
+          <span class="ranking__color-dot" style="background: var(--c-aiino);" aria-hidden="true"></span>
+          05
+        </span>
+        <div>
+          <p class="ranking__brand-name">Aiino</p>
+          <p class="ranking__brand-meta">Italia, indipendente, premium</p>
+        </div>
+        <div class="ranking__stat">
+          <span class="ranking__stat-label">Follower IG</span>
+          <span class="ranking__stat-value">1,8K</span>
+        </div>
+        <div class="ranking__stat">
+          <span class="ranking__stat-label">Ads Meta IT</span>
+          <span class="ranking__stat-value ranking__stat-value--zero">0</span>
+        </div>
+        <div class="ranking__notes" style="grid-column: 1 / -1;">
+          <span class="tag tag--alert">Zero ads</span>
+          <span class="tag tag--warn">Solo Apple</span>
+          <span class="tag">Reference posizionamento</span>
+        </div>
+      </li>
+
+    </ol>
+  </div>
+</section>
+
+
+<article id="puro" class="competitor" aria-labelledby="puro-title">
+  <div class="competitor__inner">
+
+    <header class="competitor__header">
+      <div class="competitor__identity">
+        <span class="competitor__index">
+          <span class="competitor__index-dot" style="background: var(--c-puro);" aria-hidden="true"></span>
+          01 / 05, Puro
+        </span>
+        <h2 class="competitor__name" id="puro-title">Puro</h2>
+        <dl class="competitor__meta">
+          <div><dt>Sede</dt><dd>Modena</dd></div>
+          <div><dt>Anno</dt><dd>2002</dd></div>
+          <div><dt>Gruppo</dt><dd>SBS</dd></div>
+          <div><dt>Tier</dt><dd>1, Primary</dd></div>
+        </dl>
+      </div>
+      <div class="competitor__highlight">
+        <div class="finding finding--warn" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M10 2v8M10 14v2"/><circle cx="10" cy="10" r="8"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Da tenere a mente</span>
+            <p class="finding__text">Puro è di Modena, stessa città di OKKO (Fiorano Modenese). Probabile sovrapposizione di rete e fornitori. Competere con Puro significa competere con la macchina industriale del Gruppo SBS.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="panel-group panel-group--offset">
+
+      <section class="panel panel-group__left" aria-labelledby="puro-ig">
+        <header class="panel__head">
+          <h3 class="panel__title" id="puro-ig">Instagram</h3>
+          <span class="panel__chip" lang="en">@puroitalianstyle</span>
+        </header>
+
+        <div class="figures">
+          <div role="figure" class="figure" aria-label="27,4 mila follower">
+            <span class="figure__value">27,4K</span>
+            <span class="figure__label">Follower</span>
+          </div>
+          <div role="figure" class="figure" aria-label="2.206 post pubblicati">
+            <span class="figure__value">2.206</span>
+            <span class="figure__label">Post</span>
+          </div>
+          <div role="figure" class="figure" aria-label="383 account seguiti">
+            <span class="figure__value">383</span>
+            <span class="figure__label">Seguiti</span>
+          </div>
+        </div>
+
+        <dl class="data-list">
+          <div class="data-list__row">
+            <dt class="data-list__key">Bio</dt>
+            <dd class="data-list__value" lang="en">Tech Accessories, iPhone 17 series</dd>
+          </div>
+          <div class="data-list__row">
+            <dt class="data-list__key">Hashtag brand</dt>
+            <dd class="data-list__value mono">#purocare</dd>
+          </div>
+          <div class="data-list__row">
+            <dt class="data-list__key">Struttura Highlights</dt>
+            <dd class="data-list__value">Product-led, per modello iPhone</dd>
+          </div>
+          <div class="data-list__row">
+            <dt class="data-list__key">Cluster IG</dt>
+            <dd class="data-list__value">Tech accessories, ricondizionati, brand mobile</dd>
+          </div>
+        </dl>
+
+        <div class="tag-row">
+          <span class="tag">iPhone 17</span>
+          <span class="tag">D3O Protected</span>
+          <span class="tag">Community</span>
+          <span class="tag">Puro Lab</span>
+          <span class="tag">Nameless</span>
+          <span class="tag">Bands</span>
+        </div>
+      </section>
+
+      <section class="panel panel-group__right" aria-labelledby="puro-ads">
+        <header class="panel__head">
+          <h3 class="panel__title" id="puro-ads">Meta Ads Library, Italia</h3>
+          <span class="panel__chip">17 attive</span>
+        </header>
+
+        <div class="figures">
+          <div role="figure" class="figure" aria-label="17 ads attive">
+            <span class="figure__value">17</span>
+            <span class="figure__label">Ads attive</span>
+          </div>
+          <div role="figure" class="figure" aria-label="3 inserzionisti diversi">
+            <span class="figure__value">3</span>
+            <span class="figure__label">Inserzionisti</span>
+          </div>
+          <div role="figure" class="figure" aria-label="6 ads pagate a influencer">
+            <span class="figure__value">6</span>
+            <span class="figure__label">Da influencer</span>
+          </div>
+        </div>
+
+        <div class="finding finding--good" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M4 10l4 4 8-8"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Modello influencer</span>
+            <p class="finding__text">Hopebelle, 5 ads in otto mesi. Matteo Vicenza Italy, una. Strumento brand-partnership di Meta. Codice sconto influencer-coded <span class="mono">HOPEBELLE20</span>, meno 20 per cento.</p>
+          </div>
+        </div>
+
+        <table class="ads-table" aria-label="Prodotti più spinti su Meta Ads">
+          <caption>Prodotti spinti, per numero di varianti ads</caption>
+          <thead>
+            <tr>
+              <th scope="col">Prodotto</th>
+              <th scope="col" class="nowrap">Ads</th>
+              <th scope="col">Format</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Smart Tracker Find Me</th>
+              <td class="num-tabular">4</td>
+              <td>Video</td>
+            </tr>
+            <tr>
+              <th scope="row">Power Mag e Power Mag Plus</th>
+              <td class="num-tabular">4</td>
+              <td>Video</td>
+            </tr>
+            <tr>
+              <th scope="row">Cinturini Apple Watch</th>
+              <td class="num-tabular">3</td>
+              <td>Video</td>
+            </tr>
+            <tr>
+              <th scope="row">Power Go 2-in-1</th>
+              <td class="num-tabular">2</td>
+              <td>Video</td>
+            </tr>
+            <tr>
+              <th scope="row">Mag Station 3-in-1 Qi2</th>
+              <td class="num-tabular">1</td>
+              <td>Video</td>
+            </tr>
+            <tr>
+              <th scope="row">Cover e brand awareness</th>
+              <td class="num-tabular">3</td>
+              <td>Misto</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="finding finding--key" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M10 2l2.4 5.8L18 8.5l-4 4 1 6.5L10 16l-5 3 1-6.5-4-4 5.6-0.7z"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Da segnare</span>
+            <p class="finding__text">Catalogo ads tutto Apple. Nessuna ads per cover Samsung o Android. Tracking UTM granulare: <span class="mono">utm_campaign=prodotto_creator</span>. Cadenza: gennaio 2025 fino a marzo 2026, picchi sui lanci Apple.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</article>
+
+
+<article id="sbs" class="competitor" aria-labelledby="sbs-title">
+  <div class="competitor__inner">
+
+    <header class="competitor__header">
+      <div class="competitor__identity">
+        <span class="competitor__index">
+          <span class="competitor__index-dot" style="background: var(--c-sbs);" aria-hidden="true"></span>
+          02 / 05, SBS Mobile
+        </span>
+        <h2 class="competitor__name" id="sbs-title">SBS Mobile</h2>
+        <dl class="competitor__meta">
+          <div><dt>Sede</dt><dd>Miasino (NO)</dd></div>
+          <div><dt>Anno</dt><dd>1994</dd></div>
+          <div><dt>Gruppo</dt><dd>Capogruppo SBS</dd></div>
+          <div><dt>Tier</dt><dd>1, Primary</dd></div>
+        </dl>
+      </div>
+      <div class="competitor__highlight">
+        <div class="finding finding--alert" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M10 6v5M10 14v0.5"/><circle cx="10" cy="10" r="8"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Testa a testa con OKKO</span>
+            <p class="finding__text">Stessa soglia di spedizione gratuita: 19,90 euro. Multi-brand con copertura analoga, posizionamento mid-market identico. Il competitor strutturalmente più simile a OKKO sul mercato italiano.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="panel-group">
+
+      <section class="panel" aria-labelledby="sbs-ig">
+        <header class="panel__head">
+          <h3 class="panel__title" id="sbs-ig">Instagram</h3>
+          <span class="panel__chip" lang="en">@sbsmobile</span>
+        </header>
+
+        <div class="figures">
+          <div role="figure" class="figure" aria-label="15,5 mila follower">
+            <span class="figure__value">15,5K</span>
+            <span class="figure__label">Follower</span>
+          </div>
+          <div role="figure" class="figure" aria-label="1.160 post">
+            <span class="figure__value">1.160</span>
+            <span class="figure__label">Post</span>
+          </div>
+          <div role="figure" class="figure" aria-label="376 seguiti">
+            <span class="figure__value">376</span>
+            <span class="figure__label">Seguiti</span>
+          </div>
+        </div>
+
+        <dl class="data-list">
+          <div class="data-list__row">
+            <dt class="data-list__key">Bio</dt>
+            <dd class="data-list__value" lang="en">Be the person you want to be. Smarter, Together.</dd>
+          </div>
+          <div class="data-list__row">
+            <dt class="data-list__key">Hashtag brand</dt>
+            <dd class="data-list__value mono">#SBSmobile, #SmarterTogether</dd>
+          </div>
+          <div class="data-list__row">
+            <dt class="data-list__key">Struttura Highlights</dt>
+            <dd class="data-list__value">Brand pillar: Lifestyle, Tech, Be Green, Sport, People</dd>
+          </div>
+          <div class="data-list__row">
+            <dt class="data-list__key">Cluster IG</dt>
+            <dd class="data-list__value">Tech brand, carrier telecom, GDO elettronica</dd>
+          </div>
+          <div class="data-list__row">
+            <dt class="data-list__key">Altri canali</dt>
+            <dd class="data-list__value">TikTok @sbsmobile, YouTube SBSspa</dd>
+          </div>
+        </dl>
+
+        <div class="finding finding--info" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="10" cy="10" r="8"/><path d="M10 14V9M10 6v0.5"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Cluster signal</span>
+            <p class="finding__text">L'algoritmo IG li accosta a Fastweb, WINDTRE, Euronics, Trony: SBS è percepita anche come fornitore B2B di canale telecom, oltre che brand consumer. Coerente con il posizionamento ibrido.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="sbs-ads">
+        <header class="panel__head">
+          <h3 class="panel__title" id="sbs-ads">Meta Ads Library, Italia</h3>
+          <span class="panel__chip">6 attive</span>
+        </header>
+
+        <div class="figures">
+          <div role="figure" class="figure" aria-label="6 ads attive">
+            <span class="figure__value">6</span>
+            <span class="figure__label">Ads attive</span>
+          </div>
+          <div role="figure" class="figure" aria-label="Un solo inserzionista">
+            <span class="figure__value">1</span>
+            <span class="figure__label">Inserzionista</span>
+          </div>
+          <div role="figure" class="figure" aria-label="Zero collab influencer">
+            <span class="figure__value">0</span>
+            <span class="figure__label">Influencer</span>
+          </div>
+        </div>
+
+        <table class="ads-table">
+          <caption>Cadenza ads, da ottobre 2025 a marzo 2026</caption>
+          <thead>
+            <tr>
+              <th scope="col">Data</th>
+              <th scope="col">Obiettivo</th>
+              <th scope="col">Prodotto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="nowrap">Ott 2025</th>
+              <td>Page follow IG</td>
+              <td>Brand awareness, due ads</td>
+            </tr>
+            <tr>
+              <th scope="row" class="nowrap">Mar 2026</th>
+              <td>Conversion</td>
+              <td>Cover iPhone 15 Pro MagSafe</td>
+            </tr>
+            <tr>
+              <th scope="row" class="nowrap">Mar 2026</th>
+              <td>Conversion</td>
+              <td>Glass Honor X7 e supporti</td>
+            </tr>
+            <tr>
+              <th scope="row" class="nowrap">Mar 2026</th>
+              <td>Lead gen</td>
+              <td>Newsletter, codice sconto via email</td>
+            </tr>
+            <tr>
+              <th scope="row" class="nowrap">Mar 2026</th>
+              <td>Retargeting</td>
+              <td>Powerbank 5.000 mAh wireless</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="finding finding--key" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M10 2l2.4 5.8L18 8.5l-4 4 1 6.5L10 16l-5 3 1-6.5-4-4 5.6-0.7z"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Da segnare</span>
+            <p class="finding__text">Tono cento per cento funzionale-tecnico. Zero influencer, zero codici sconto. La tagline "Smarter, Together" è in bio ma assente nelle ads: gap di coerenza. Nessun UTM strutturato. Unica del cluster a usare Meta per raccolta email.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</article>
+
+
+<article id="cellularline" class="competitor" aria-labelledby="cellularline-title">
+  <div class="competitor__inner">
+
+    <header class="competitor__header">
+      <div class="competitor__identity">
+        <span class="competitor__index">
+          <span class="competitor__index-dot" style="background: var(--c-cellularline);" aria-hidden="true"></span>
+          03 / 05, Cellularline
+        </span>
+        <h2 class="competitor__name" id="cellularline-title">Cellularline</h2>
+        <dl class="competitor__meta">
+          <div><dt>Sede</dt><dd>Reggio Emilia</dd></div>
+          <div><dt>Anno</dt><dd>1990</dd></div>
+          <div><dt>Gruppo</dt><dd>Capogruppo, include Systema EU</dd></div>
+          <div><dt>Tier</dt><dd>1, Primary</dd></div>
+        </dl>
+      </div>
+      <div class="competitor__highlight">
+        <div class="finding finding--alert" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M10 6v5M10 14v0.5"/><circle cx="10" cy="10" r="8"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Il finding principale di tutto il report</span>
+            <p class="finding__text">Zero ads Meta IT ufficiali. Le cinque inserzioni trovate per la keyword "cellularline" sono tutte di rivenditori terzi. Il leader di categoria non investe su Meta paid in Italia, presumibilmente per trade marketing via retail.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="panel-group panel-group--offset">
+
+      <section class="panel panel-group__left" aria-labelledby="cellularline-ig">
+        <header class="panel__head">
+          <h3 class="panel__title" id="cellularline-ig">Instagram</h3>
+          <span class="panel__chip" lang="en">@cellularline</span>
+        </header>
+
+        <div class="figures">
+          <div role="figure" class="figure" aria-label="27,7 mila follower">
+            <span class="figure__value">27,7K</span>
+            <span class="figure__label">Follower</span>
+          </div>
+          <div role="figure" class="figure" aria-label="1.242 post">
+            <span class="figure__value">1.242</span>
+            <span class="figure__label">Post</span>
+          </div>
+          <div role="figure" class="figure" aria-label="277 seguiti">
+            <span class="figure__value">277</span>
+            <span class="figure__label">Seguiti</span>
+          </div>
+        </div>
+
+        <dl class="data-list">
+          <div class="data-list__row">
+            <dt class="data-list__key">Bio</dt>
+            <dd class="data-list__value" lang="en">Live your potential to the fullest. #cellularline</dd>
+          </div>
+          <div class="data-list__row">
+            <dt class="data-list__key">Hashtag brand</dt>
+            <dd class="data-list__value mono">#cellularline</dd>
+          </div>
+          <div class="data-list__row">
+            <dt class="data-list__key">Struttura Highlights</dt>
+            <dd class="data-list__value">Scenario-led, solo glifi (vista, agenda, lavoro, sport, viaggio)</dd>
+          </div>
+          <div class="data-list__row">
+            <dt class="data-list__key">Cluster IG</dt>
+            <dd class="data-list__value">Tutti e 3 i competitor diretti italiani, più Belkin, Spigen, Anker, GDO</dd>
+          </div>
+        </dl>
+
+        <div class="finding finding--info" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="10" cy="10" r="8"/><path d="M10 14V9M10 6v0.5"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Struttura highlights unica</span>
+            <p class="finding__text">Le Highlights sono solo simboli grafici, nessuna parola: organizzazione per occasione d'uso. Approccio brand sofisticato rispetto al product-led o pillar degli altri.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel panel-group__right" aria-labelledby="cellularline-ads">
+        <header class="panel__head">
+          <h3 class="panel__title" id="cellularline-ads">Meta Ads Library, Italia</h3>
+          <span class="panel__chip">0 ufficiali</span>
+        </header>
+
+        <div class="figures">
+          <div role="figure" class="figure" aria-label="Zero ads ufficiali">
+            <span class="figure__value figure__value--zero">0</span>
+            <span class="figure__label">Ads ufficiali</span>
+          </div>
+          <div role="figure" class="figure" aria-label="5 ads di rivenditori">
+            <span class="figure__value">5</span>
+            <span class="figure__label">Ads rivenditori</span>
+          </div>
+          <div role="figure" class="figure" aria-label="Zero influencer">
+            <span class="figure__value figure__value--zero">0</span>
+            <span class="figure__label">Influencer</span>
+          </div>
+        </div>
+
+        <div class="finding finding--alert" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M10 6v5M10 14v0.5"/><circle cx="10" cy="10" r="8"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Nessuna ads ufficiale</span>
+            <p class="finding__text">Le cinque inserzioni appartengono a Dct Service Genova, Euronics Nicosia, Medos Service Store, Sinergy Barone, MOTO WORLD La Spezia. Rivenditori che citano Cellularline negli hashtag.</p>
+          </div>
+        </div>
+
+        <div class="finding finding--good" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M4 10l4 4 8-8"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Implicazione per OKKO</span>
+            <p class="finding__text">Con un investimento moderato su Meta Italia, OKKO può occupare l'audience che il leader non presidia direttamente. CPM bassi, nessuno scontro testa a testa.</p>
+          </div>
+        </div>
+
+        <div class="finding finding--info" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="10" cy="10" r="8"/><path d="M10 14V9M10 6v0.5"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Budget ipotizzato</span>
+            <p class="finding__text">Cellularline investe presumibilmente su retail trade marketing, sponsorship sportive (MotoGP, calcio), Google e Amazon. Trentacinque anni di brand awareness non richiedono acquisition paid social.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</article>
+
+
+<article id="celly" class="competitor" aria-labelledby="celly-title">
+  <div class="competitor__inner">
+
+    <header class="competitor__header">
+      <div class="competitor__identity">
+        <span class="competitor__index">
+          <span class="competitor__index-dot" style="background: var(--c-celly);" aria-hidden="true"></span>
+          04 / 05, Celly
+        </span>
+        <h2 class="competitor__name" id="celly-title">Celly</h2>
+        <dl class="competitor__meta">
+          <div><dt>Sede</dt><dd>Vimercate (MI), "Designed in Milano"</dd></div>
+          <div><dt>Anno</dt><dd>1998</dd></div>
+          <div><dt>Gruppo</dt><dd>Esprinet</dd></div>
+          <div><dt>Tier</dt><dd>1, Standard</dd></div>
+        </dl>
+      </div>
+      <div class="competitor__highlight">
+        <div class="finding finding--warn" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M10 2v8M10 14v2"/><circle cx="10" cy="10" r="8"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Da tenere a mente</span>
+            <p class="finding__text">Backed da Esprinet, il più grande distributore IT di Italia e Spagna. Competere con Celly significa competere con la macchina distributiva di Esprinet. Vantaggio B2B significativo.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="panel-group">
+
+      <section class="panel" aria-labelledby="celly-ig">
+        <header class="panel__head">
+          <h3 class="panel__title" id="celly-ig">Instagram</h3>
+          <span class="panel__chip" lang="en">@cellydesign</span>
+        </header>
+
+        <div class="figures">
+          <div role="figure" class="figure" aria-label="12,9 mila follower">
+            <span class="figure__value">12,9K</span>
+            <span class="figure__label">Follower</span>
+          </div>
+          <div role="figure" class="figure" aria-label="1.086 post">
+            <span class="figure__value">1.086</span>
+            <span class="figure__label">Post</span>
+          </div>
+          <div role="figure" class="figure" aria-label="613 seguiti">
+            <span class="figure__value">613</span>
+            <span class="figure__label">Seguiti</span>
+          </div>
+        </div>
+
+        <dl class="data-list">
+          <div class="data-list__row">
+            <dt class="data-list__key">Bio</dt>
+            <dd class="data-list__value">Un mondo di accessori e divertimento</dd>
+          </div>
+          <div class="data-list__row">
+            <dt class="data-list__key">Hashtag brand</dt>
+            <dd class="data-list__value mono">#CellyWorld, #H24</dd>
+          </div>
+          <div class="data-list__row">
+            <dt class="data-list__key">Struttura Highlights</dt>
+            <dd class="data-list__value">Moments e linee prodotto, tredici in tutto, il set più ricco</dd>
+          </div>
+          <div class="data-list__row">
+            <dt class="data-list__key">Cluster IG</dt>
+            <dd class="data-list__value">Puro, Aiino, MAGEASY. Design e lifestyle, non incumbent</dd>
+          </div>
+        </dl>
+
+        <div class="tag-row">
+          <span class="tag">Palajova</span>
+          <span class="tag">Gift Guide</span>
+          <span class="tag">Festival</span>
+          <span class="tag">Sanremo</span>
+          <span class="tag">Anniversary</span>
+          <span class="tag">Summer</span>
+          <span class="tag">MAG</span>
+          <span class="tag">Audio</span>
+          <span class="tag">Fotografia</span>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="celly-ads">
+        <header class="panel__head">
+          <h3 class="panel__title" id="celly-ads">Meta Ads Library, Italia</h3>
+          <span class="panel__chip">7 attive</span>
+        </header>
+
+        <div class="figures">
+          <div role="figure" class="figure" aria-label="7 ads ufficiali">
+            <span class="figure__value">7</span>
+            <span class="figure__label">Ads</span>
+          </div>
+          <div role="figure" class="figure" aria-label="Campagna di 11 giorni">
+            <span class="figure__value">11</span>
+            <span class="figure__label">Giorni</span>
+          </div>
+          <div role="figure" class="figure" aria-label="5 su 7 verso profilo IG">
+            <span class="figure__value">5/7</span>
+            <span class="figure__label">a IG</span>
+          </div>
+        </div>
+
+        <div class="finding finding--key" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M10 2l2.4 5.8L18 8.5l-4 4 1 6.5L10 16l-5 3 1-6.5-4-4 5.6-0.7z"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Modello ads: ondata breve e intensa</span>
+            <p class="finding__text">Tutte le sette ads concentrate in undici giorni, dal 4 al 15 maggio 2026. Opposto al modello evergreen di Puro. Il 71 per cento punta a crescita profilo IG, non a conversion.</p>
+          </div>
+        </div>
+
+        <table class="ads-table">
+          <caption>Le sette ads, in ordine di pubblicazione</caption>
+          <thead>
+            <tr>
+              <th scope="col" class="nowrap">Data</th>
+              <th scope="col">Prodotto</th>
+              <th scope="col">CTA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row" class="nowrap">4 mag</th><td>Slim Chargers</td><td>IG profile</td></tr>
+            <tr><th scope="row" class="nowrap">4 mag</th><td>Cover MagSafe</td><td>FB message</td></tr>
+            <tr><th scope="row" class="nowrap">4 mag</th><td>Powerbank magnetico alluminio</td><td>IG profile, bilingue</td></tr>
+            <tr><th scope="row" class="nowrap">4 mag</th><td>Cavi USB-C magnetici autoriavvolgenti</td><td>IG profile</td></tr>
+            <tr><th scope="row" class="nowrap">4 mag</th><td>Accessori iPhone, catch-all</td><td>IG profile, bilingue</td></tr>
+            <tr><th scope="row" class="nowrap">8 mag</th><td>KidsCamSticky, fotocamera bambini</td><td>IG profile</td></tr>
+            <tr><th scope="row" class="nowrap">15 mag</th><td>Trainer Round smartwatch AMOLED</td><td>Brand video</td></tr>
+          </tbody>
+        </table>
+
+        <div class="finding finding--info" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="10" cy="10" r="8"/><path d="M10 14V9M10 6v0.5"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Tono copy</span>
+            <p class="finding__text">Giochi di parole: "il magnetismo animale di un cavo", "da non credere al proprio occhio, pardon, occhi". Zero influencer, zero UTM, zero codici sconto. Brand building puro.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</article>
+
+
+<article id="aiino" class="competitor" aria-labelledby="aiino-title">
+  <div class="competitor__inner">
+
+    <header class="competitor__header">
+      <div class="competitor__identity">
+        <span class="competitor__index">
+          <span class="competitor__index-dot" style="background: var(--c-aiino);" aria-hidden="true"></span>
+          05 / 05, Aiino
+        </span>
+        <h2 class="competitor__name" id="aiino-title">Aiino</h2>
+        <dl class="competitor__meta">
+          <div><dt>Origine</dt><dd>Italia</dd></div>
+          <div><dt>Gruppo</dt><dd>Indipendente</dd></div>
+          <div><dt>Fascia</dt><dd>Premium</dd></div>
+          <div><dt>Tier</dt><dd>1, Standard</dd></div>
+        </dl>
+      </div>
+      <div class="competitor__highlight">
+        <div class="finding finding--info" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="10" cy="10" r="8"/><path d="M10 14V9M10 6v0.5"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Reference di posizionamento, non di budget</span>
+            <p class="finding__text">Aiino vale come reference di visual identity ("italian ideas") senza rischio di scontro CPM su Meta. Zero ads, 1.827 follower. Confrontiamoci con loro su brand storytelling, non su spesa.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="panel-group panel-group--offset">
+
+      <section class="panel panel-group__left" aria-labelledby="aiino-ig">
+        <header class="panel__head">
+          <h3 class="panel__title" id="aiino-ig">Instagram</h3>
+          <span class="panel__chip" lang="en">@aiino_official</span>
+        </header>
+
+        <div class="figures">
+          <div role="figure" class="figure" aria-label="1.827 follower">
+            <span class="figure__value">1.827</span>
+            <span class="figure__label">Follower</span>
+          </div>
+          <div role="figure" class="figure" aria-label="932 post">
+            <span class="figure__value">932</span>
+            <span class="figure__label">Post</span>
+          </div>
+          <div role="figure" class="figure" aria-label="31 seguiti">
+            <span class="figure__value">31</span>
+            <span class="figure__label">Seguiti</span>
+          </div>
+        </div>
+
+        <dl class="data-list">
+          <div class="data-list__row">
+            <dt class="data-list__key">Bio</dt>
+            <dd class="data-list__value" lang="en">Accessories for all Apple devices. Italian design.</dd>
+          </div>
+          <div class="data-list__row">
+            <dt class="data-list__key">Hashtag brand</dt>
+            <dd class="data-list__value">Nessuno in bio</dd>
+          </div>
+          <div class="data-list__row">
+            <dt class="data-list__key">Struttura Highlights</dt>
+            <dd class="data-list__value">Non categorizzate, solo "Storie in evidenza" generica</dd>
+          </div>
+          <div class="data-list__row">
+            <dt class="data-list__key">Rapporto post / follower</dt>
+            <dd class="data-list__value">0,51, alto, contenuto non distribuito</dd>
+          </div>
+          <div class="data-list__row">
+            <dt class="data-list__key">Fascia prezzo</dt>
+            <dd class="data-list__value">Da 12,99 a 99,99 euro</dd>
+          </div>
+        </dl>
+
+        <div class="finding finding--warn" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M10 2v8M10 14v2"/><circle cx="10" cy="10" r="8"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Disallineamento dichiarato e percepito</span>
+            <p class="finding__text">La bio dice "Italian design premium", ma il cluster IG li associa a tech generalista, non Apple-only specialist. Cellularline assente dal cluster. Gap tra posizionamento dichiarato e percepito.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel panel-group__right" aria-labelledby="aiino-ads">
+        <header class="panel__head">
+          <h3 class="panel__title" id="aiino-ads">Meta Ads Library, Italia</h3>
+          <span class="panel__chip">0 attive</span>
+        </header>
+
+        <div class="figures">
+          <div role="figure" class="figure" aria-label="Zero ads attive">
+            <span class="figure__value figure__value--zero">0</span>
+            <span class="figure__label">Ads</span>
+          </div>
+          <div role="figure" class="figure" aria-label="Zero influencer">
+            <span class="figure__value figure__value--zero">0</span>
+            <span class="figure__label">Influencer</span>
+          </div>
+          <div role="figure" class="figure" aria-label="Zero UTM tracciati">
+            <span class="figure__value figure__value--zero">0</span>
+            <span class="figure__label">UTM</span>
+          </div>
+        </div>
+
+        <div class="finding finding--alert" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M10 6v5M10 14v0.5"/><circle cx="10" cy="10" r="8"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Nessuna ads Meta IT</span>
+            <p class="finding__text">Coerente con community piccola (1.827 follower), posizionamento premium Apple e indipendenza dal gruppo industriale. Audience verticale, ricerca attiva, non intercettata via social paid.</p>
+          </div>
+        </div>
+
+        <div class="finding finding--info" role="note">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="10" cy="10" r="8"/><path d="M10 14V9M10 6v0.5"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Canali acquisition ipotizzati</span>
+            <p class="finding__text">SEO, Google Shopping, Amazon Italia. Modello pull marketing, non push advertising.</p>
+          </div>
+        </div>
+
+        <p class="panel__title" style="margin-top: 1.5rem;">Catalogo, ecosistema Apple completo</p>
+        <div class="tag-row">
+          <span class="tag">Cover iPhone</span>
+          <span class="tag">Custodie iPad</span>
+          <span class="tag">Cover AirPods</span>
+          <span class="tag">Cinturini Apple Watch</span>
+          <span class="tag">Custodie MacBook</span>
+          <span class="tag">Hub USB-C</span>
+          <span class="tag">MagSafe charger</span>
+          <span class="tag">Cavi USB-C</span>
+        </div>
+
+        <div class="finding finding--good" role="note" style="margin-top: 1.5rem;">
+          <svg class="finding__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M4 10l4 4 8-8"/>
+          </svg>
+          <div class="finding__body">
+            <span class="finding__label">Cosa portare a casa</span>
+            <p class="finding__text">Tono narrativo: "avvolgente come un koala, leggero come il vento". OKKO può iniettare una frase creativa per scheda prodotto, dosandola. "Designed in Modena" può differenziare da "Designed in Milano".</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</article>
+
+
+<section id="comparison" class="comparison section--tall" aria-labelledby="comparison-title">
+  <div class="comparison__head">
+    <p class="eyebrow">Confronto</p>
+    <h2 class="comparison__title" id="comparison-title">I cinque competitor accanto a OKKO.</h2>
+    <p class="comparison__intro">Matrice di KPI principali. Le caselle "non disponibile" sono dati non rilevati in questa ricerca, da verificare in futuro.</p>
+  </div>
+
+  <div class="comparison__table-wrap">
+    <table class="comparison-table">
+      <caption>Tabella comparativa: 13 indicatori sui 6 brand</caption>
+      <thead>
+        <tr>
+          <th scope="col">Indicatore</th>
+          <th scope="col">Puro</th>
+          <th scope="col">SBS</th>
+          <th scope="col">Cellularline</th>
+          <th scope="col">Celly</th>
+          <th scope="col">Aiino</th>
+          <th scope="col" class="col-okko">OKKO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Fondazione</th>
+          <td>2002</td><td>1994</td><td>1990</td><td>1998</td><td class="v-empty">n.d.</td>
+          <td class="col-okko">2014</td>
+        </tr>
+        <tr>
+          <th scope="row">Gruppo industriale</th>
+          <td>Gruppo SBS</td><td class="v-strong">Capogruppo SBS</td><td class="v-strong">Capogruppo CL</td>
+          <td>Esprinet</td><td class="v-good">Indipendente</td>
+          <td class="col-okko v-good">Indipendente</td>
+        </tr>
+        <tr>
+          <th scope="row">Brand smartphone</th>
+          <td class="v-bad">Apple-focus</td><td>12 e oltre</td><td>Apple, Samsung, Xiaomi</td>
+          <td>Multi-brand</td><td class="v-bad">Solo Apple</td>
+          <td class="col-okko">Multi-brand</td>
+        </tr>
+        <tr>
+          <th scope="row">Follower Instagram</th>
+          <td class="v-strong">27,4K</td><td>15,5K</td><td class="v-strong">27,7K</td>
+          <td>12,9K</td><td class="v-bad">1,8K</td>
+          <td class="col-okko v-empty">n.d.</td>
+        </tr>
+        <tr>
+          <th scope="row">Post Instagram</th>
+          <td class="v-strong">2.206</td><td>1.160</td><td>1.242</td>
+          <td>1.086</td><td>932</td>
+          <td class="col-okko v-empty">n.d.</td>
+        </tr>
+        <tr>
+          <th scope="row">Ads Meta IT attive</th>
+          <td class="v-strong">17</td><td>6</td><td class="v-bad">0 ufficiali</td>
+          <td>7</td><td class="v-bad">0</td>
+          <td class="col-okko v-empty">n.d.</td>
+        </tr>
+        <tr>
+          <th scope="row">Collab influencer Meta</th>
+          <td class="v-good">Sì, Hopebelle</td><td class="v-empty">No</td><td class="v-empty">—</td>
+          <td class="v-empty">No</td><td class="v-empty">—</td>
+          <td class="col-okko v-empty">n.d.</td>
+        </tr>
+        <tr>
+          <th scope="row">UTM tracking</th>
+          <td class="v-good">Sì, granulare</td><td class="v-empty">No</td><td class="v-empty">—</td>
+          <td class="v-empty">No</td><td class="v-empty">—</td>
+          <td class="col-okko v-empty">n.d.</td>
+        </tr>
+        <tr>
+          <th scope="row">Strategia ads</th>
+          <td>Evergreen, push stagionale</td><td>Ondate bimestrali</td>
+          <td class="v-bad">Assente, trade mkt</td><td>Ondate brevi intense</td>
+          <td class="v-bad">Nessuna</td>
+          <td class="col-okko v-empty">n.d.</td>
+        </tr>
+        <tr>
+          <th scope="row">Spedizione gratuita sopra</th>
+          <td>19,95 €</td><td class="v-bad">19,90 € (=OKKO)</td><td class="v-good">29,95 €</td>
+          <td class="v-empty">n.d.</td><td class="v-good">29,95 €</td>
+          <td class="col-okko v-good">19,90 €</td>
+        </tr>
+        <tr>
+          <th scope="row">Reso</th>
+          <td class="v-empty">n.d.</td><td class="v-empty">n.d.</td><td class="v-bad">14 giorni</td>
+          <td class="v-empty">n.d.</td><td class="v-empty">n.d.</td>
+          <td class="col-okko v-good">30 giorni</td>
+        </tr>
+        <tr>
+          <th scope="row">Pagamento rateale</th>
+          <td>Klarna</td><td class="v-empty">—</td><td>Scalapay</td>
+          <td class="v-empty">—</td><td class="v-empty">—</td>
+          <td class="col-okko v-bad">Da confermare</td>
+        </tr>
+        <tr>
+          <th scope="row">Promo strutturale</th>
+          <td class="v-empty">—</td><td class="v-empty">—</td><td>Saldi perenni, fino a 67 per cento</td>
+          <td class="v-empty">—</td><td class="v-empty">—</td>
+          <td class="col-okko v-good">3 x 2 su tutto</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<section id="insights" class="section insights" aria-labelledby="insights-title">
+  <div class="insights__head">
+    <div>
+      <p class="eyebrow">Letture chiave</p>
+      <h2 class="insights__title" id="insights-title">Sei cose da portarci a casa.</h2>
+    </div>
+    <p class="insights__intro">
+      Conclusioni operative basate sui dati raccolti via Playwright MCP il 17 maggio 2026.
+      Indirizzano OKKO sulle prossime mosse, non sostituiscono test reali.
+    </p>
+  </div>
+
+  <ol class="insights__list">
+
+    <li class="insight">
+      <span class="insight__num" aria-hidden="true"></span>
+      <h3 class="insight__title">Cellularline non presidia Meta Italia</h3>
+      <p class="insight__body">
+        Il leader di categoria ha zero ads Meta ufficiali. Con un investimento moderato,
+        OKKO può occupare audience ad alta intenzionalità non contesa direttamente dal
+        brand più riconoscibile del mercato. CPM bassi, scontro evitato.
+      </p>
+    </li>
+
+    <li class="insight">
+      <span class="insight__num" aria-hidden="true"></span>
+      <h3 class="insight__title">Aiino è reference di stile, non di budget</h3>
+      <p class="insight__body">
+        1.827 follower, zero ads. Confrontarsi con Aiino su brand storytelling e tono
+        ("Designed in Modena" contro "italian ideas"), non su acquisition paid. Nessun
+        rischio di scontro CPM.
+      </p>
+    </li>
+
+    <li class="insight">
+      <span class="insight__num" aria-hidden="true"></span>
+      <h3 class="insight__title">Puro usa influencer in modo preciso</h3>
+      <p class="insight__body">
+        Hopebelle, cinque ads boostate in otto mesi, codice sconto tracciato HOPEBELLE20,
+        UTM granulare per attribuzione. Modello replicabile con creator mid-size italiani
+        Apple-oriented, scontrini sopra i 30 euro.
+      </p>
+    </li>
+
+    <li class="insight">
+      <span class="insight__num" aria-hidden="true"></span>
+      <h3 class="insight__title">SBS investe su raccolta email via Meta</h3>
+      <p class="insight__body">
+        Unico del cluster a usare Meta Ads per acquisizione email (lead gen con codice
+        sconto). Strategia semplice, costo basso, alta intenzionalità. Si innesta bene
+        sul funnel OKKO e Klaviyo.
+      </p>
+    </li>
+
+    <li class="insight">
+      <span class="insight__num" aria-hidden="true"></span>
+      <h3 class="insight__title">OKKO ha due USP difendibili</h3>
+      <p class="insight__body">
+        Spedizione gratuita da 19,90 € (Cellularline e Aiino chiedono 29,95 €) e reso 30
+        giorni (Cellularline 14). Vanno comunicati più aggressivamente, non sono ovvi al
+        cliente che non confronta brand.
+      </p>
+    </li>
+
+    <li class="insight">
+      <span class="insight__num" aria-hidden="true"></span>
+      <h3 class="insight__title">Celly usa Meta solo per crescita Instagram</h3>
+      <p class="insight__body">
+        Cinque ads su sette hanno CTA "visita il profilo Instagram", non e-commerce.
+        Modello brand building, ondate brevi e intense. Meta come amplificatore di canale
+        social, non come macchina di conversion.
+      </p>
+    </li>
+
+  </ol>
+</section>
+
+</main>
+
+<footer class="siteinfo" role="contentinfo">
+  <div class="siteinfo__inner">
+    <p>
+      Analisi interna OKKO Design, maggio 2026.
+      Dati raccolti via Playwright MCP, 17 maggio 2026.
+    </p>
+    <p>
+      Solo uso interno, non destinato a circolazione esterna.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
