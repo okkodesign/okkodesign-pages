@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Brand Hub — OKKO Design</title>
-<meta name="description" content="Documenti brand OKKO Design — uso interno, non indicizzato.">
+<title>Brand Book — OKKO Design</title>
+<meta name="description" content="Brand Book interno di OKKO Design: identità, voce, palette, tipografia, atmosfera. Documento ad uso interno, non destinato a indicizzazione o training AI.">
 
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate">
 <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
 <meta name="bingbot" content="noindex, nofollow, noarchive">
-
 <meta name="GPTBot" content="noindex, nofollow">
 <meta name="ChatGPT-User" content="noindex, nofollow">
 <meta name="OAI-SearchBot" content="noindex, nofollow">
@@ -23,162 +22,526 @@
 <meta name="Bytespider" content="noindex, nofollow">
 <meta name="Amazonbot" content="noindex, nofollow">
 <meta name="Meta-ExternalAgent" content="noindex, nofollow">
-
 <meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
-  :root {
-    --navy: #2F6364;
-    --coral: #C46D5E;
-    --coral-light: #F4E2DC;
-    --ivory: #F9F8F6;
-    --white: #FFFFFF;
-    --ink: #0A0A0A;
-    --muted: #6E6D67;
-    --border: #E5E0D8;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
-    background: var(--ivory);
-    color: var(--ink);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  .topbar {
-    background: var(--navy);
-    color: var(--white);
-    padding: 16px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 12px;
-    font-size: 13px;
-    letter-spacing: 0.04em;
-    max-width: 880px;
-    margin: 0 auto;
-  }
-  .topbar .brand {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-  }
-  .topbar .payoff {
-    color: var(--coral-light);
-    font-style: italic;
-  }
-  main {
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 48px 24px 96px;
-    background: var(--white);
-    border-left: 1px solid var(--border);
-    border-right: 1px solid var(--border);
-    min-height: 80vh;
-  }
-  h1 {
-    color: var(--navy);
-    font-size: 30px;
-    margin: 0 0 8px;
-    border-bottom: 2px solid var(--navy);
-    padding-bottom: 12px;
-  }
-  .lead {
-    color: var(--muted);
-    font-size: 15px;
-    margin: 0 0 32px;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-  .card {
-    display: block;
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--navy);
-    padding: 18px 20px;
-    text-decoration: none;
-    color: var(--ink);
-    transition: border-color 0.15s, background 0.15s;
-  }
-  .card:hover {
-    border-left-color: var(--coral);
-    background: var(--coral-light);
-  }
-  .card .t {
-    color: var(--navy);
-    font-weight: 700;
-    font-size: 17px;
-    margin: 0 0 4px;
-  }
-  .card .d {
-    color: var(--ink);
-    font-size: 14px;
-    margin: 0;
-  }
-  .footer {
-    margin-top: 64px;
-    padding-top: 24px;
-    border-top: 1px solid var(--border);
-    color: var(--muted);
-    font-size: 13px;
-    text-align: center;
-  }
-  .footer .payoff {
-    color: var(--navy);
-    font-style: italic;
-    font-size: 14px;
-  }
-  ::selection { background: var(--coral); color: var(--white); }
+:root {
+  --primary: #2F6364;
+  --primary-hover: #1C3B3C;
+  --primary-soft: #E8EEEE;
+  --accent: #C46D5E;
+  --accent-soft: #F4E2DC;
+  --ivory: #F9F8F6;
+  --white: #FFFFFF;
+  --ink: #0A0A0A;
+  --ink-soft: #2C2C2A;
+  --muted: #6E6D67;
+  --border: #E5E0D8;
+  --border-strong: #C8C2B5;
 
-  @media (max-width: 720px) {
-    main { padding: 32px 16px 64px; border-left: 0; border-right: 0; }
-    .topbar { font-size: 12px; padding: 14px 16px; }
-    h1 { font-size: 24px; }
+  --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  --t-1: 120ms;
+  --t-2: 220ms;
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+
+  --max-w: 920px;
+  --max-w-wide: 1180px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'ss01', 'cv11';
+}
+
+/* ---- Header --------------------------------------------------------- */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.site-header .container {
+  max-width: var(--max-w-wide);
+  margin: 0 auto;
+  padding: 18px 32px;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+}
+.brand {
+  display: inline-flex; align-items: baseline; gap: 10px;
+  text-decoration: none; color: var(--ink);
+}
+.brand-mark { font-weight: 800; letter-spacing: 0.04em; font-size: 17px; }
+.brand-sub { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.site-nav { display: flex; gap: 4px; flex-wrap: wrap; }
+.site-nav a {
+  text-decoration: none; color: var(--ink-soft);
+  padding: 6px 12px; border-radius: 6px;
+  font-size: 14px; font-weight: 500;
+  transition: background var(--t-1) var(--ease), color var(--t-1) var(--ease);
+}
+.site-nav a:hover { background: var(--primary-soft); color: var(--primary); }
+.site-nav a[aria-current="page"] { background: var(--primary); color: var(--white); }
+
+/* ---- Hub hero ------------------------------------------------------- */
+.hub-hero {
+  background: var(--ivory);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.hub-hero::before {
+  content: "";
+  position: absolute;
+  top: -120px; right: -120px;
+  width: 360px; height: 360px;
+  background: var(--primary);
+  border-radius: 50%;
+  opacity: 0.06;
+  pointer-events: none;
+}
+.hub-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -80px; left: -80px;
+  width: 240px; height: 240px;
+  background: var(--accent);
+  border-radius: 50%;
+  opacity: 0.08;
+  pointer-events: none;
+}
+.hub-hero .container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 120px 32px 96px;
+  position: relative;
+  z-index: 1;
+}
+.hub-kicker {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px; letter-spacing: 0.1em;
+  color: var(--accent); text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.hub-kicker::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.hub-title {
+  font-size: clamp(56px, 9vw, 96px);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 32px;
+}
+.hub-title .accent { color: var(--primary); }
+.hub-payoff {
+  font-size: 22px; font-style: italic;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+.hub-lead {
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 56ch;
+}
+
+/* ---- Hub meta strip ------------------------------------------------- */
+.hub-meta {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+.hub-meta .container {
+  max-width: var(--max-w-wide);
+  margin: 0 auto;
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.hub-meta dt {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.hub-meta dd { font-size: 15px; color: var(--ink); font-weight: 500; }
+
+/* ---- Document grid -------------------------------------------------- */
+.docs-section { padding: 96px 0; }
+.docs-section .container {
+  max-width: var(--max-w-wide);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.section-head { margin-bottom: 48px; max-width: var(--max-w); }
+.section-kicker {
+  font-family: var(--font-mono);
+  font-size: 12px; letter-spacing: 0.08em;
+  color: var(--accent); text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.section-title {
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  color: var(--ink);
+}
+.docs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.doc-card {
+  display: flex; flex-direction: column;
+  text-decoration: none;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px;
+  color: var(--ink);
+  position: relative;
+  transition: border-color var(--t-2) var(--ease), background var(--t-2) var(--ease), transform var(--t-2) var(--ease);
+}
+.doc-card:hover {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+  transform: translateY(-2px);
+}
+.doc-num {
+  font-family: var(--font-mono);
+  font-size: 11px; letter-spacing: 0.08em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.doc-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.doc-desc {
+  font-size: 14.5px;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+.doc-arrow {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13.5px; font-weight: 600;
+  color: var(--primary);
+  transition: gap var(--t-1) var(--ease);
+}
+.doc-card:hover .doc-arrow { gap: 10px; }
+
+/* ---- Palette showcase ---------------------------------------------- */
+.palette-section {
+  padding: 96px 0;
+  background: var(--ivory);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.palette-section .container {
+  max-width: var(--max-w-wide);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+.swatch {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--white);
+}
+.swatch-color { height: 120px; }
+.swatch-body { padding: 18px 18px 22px; }
+.swatch-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.swatch-hex {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+/* ---- Identity strip ------------------------------------------------- */
+.identity-section { padding: 96px 0; }
+.identity-section .container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.identity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+.identity-stat .num {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  font-feature-settings: 'tnum';
+}
+.identity-stat .label {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+/* ---- Footer --------------------------------------------------------- */
+.site-footer {
+  background: var(--ink);
+  color: var(--white);
+}
+.site-footer .container {
+  max-width: var(--max-w-wide);
+  margin: 0 auto;
+  padding: 48px 32px;
+  display: flex; align-items: baseline; flex-wrap: wrap;
+  gap: 16px 32px;
+}
+.footer-brand { font-weight: 700; letter-spacing: 0.04em; }
+.footer-payoff { font-style: italic; color: var(--accent-soft); }
+.footer-meta { font-size: 13px; color: rgba(255, 255, 255, 0.55); margin-left: auto; }
+
+::selection { background: var(--primary); color: var(--white); }
+
+@media (max-width: 880px) {
+  .site-header .container { padding: 14px 20px; }
+  .site-nav a { padding: 6px 10px; font-size: 13px; }
+  .brand-sub { display: none; }
+  .hub-hero .container { padding: 72px 20px 56px; }
+  .hub-payoff { font-size: 18px; }
+  .hub-lead { font-size: 16.5px; }
+  .hub-meta .container { grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 24px 20px; }
+  .docs-section, .palette-section, .identity-section { padding: 64px 0; }
+  .docs-section .container, .palette-section .container, .identity-section .container { padding: 0 20px; }
+  .docs-grid { grid-template-columns: 1fr; }
+  .site-footer .container { padding: 32px 20px; }
+  .footer-meta { margin-left: 0; width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
+  .doc-card:hover { transform: none; }
+}
 </style>
 </head>
 <body>
-<div class="topbar">
-  <span class="brand">OKKO Design</span>
-  <span class="payoff">Italian Design</span>
-  <span>Brand Hub</span>
-</div>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="./index.html" aria-current="page">
+      <span class="brand-mark">OKKO</span>
+      <span class="brand-sub">Brand Book</span>
+    </a>
+    <nav class="site-nav" aria-label="Documenti del brand book">
+      <a href="./brand-guidelines.html">Guidelines</a>
+      <a href="./tone-of-voice.html">Tone of Voice</a>
+      <a href="./palette-colori.html">Palette</a>
+      <a href="./font-e-tipografia.html">Tipografia</a>
+      <a href="./moodboard-descrittivo.html">Moodboard</a>
+    </nav>
+  </div>
+</header>
+
 <main>
-  <h1>Brand Hub</h1>
-  <p class="lead">Documenti brand di riferimento per OKKO Design. Uso interno: nessuno di questi file è destinato all'indicizzazione su motori di ricerca o all'addestramento di modelli AI.</p>
+  <section class="hub-hero">
+    <div class="container">
+      <p class="hub-kicker">Brand Book · 2026</p>
+      <h1 class="hub-title">OKKO <span class="accent">Design</span></h1>
+      <p class="hub-payoff">Italian Design.</p>
+      <p class="hub-lead">Documenti di riferimento del brand: identità, voce, palette, tipografia, atmosfera. Tutto quello che serve per parlare e disegnare a nome di OKKO senza tradire la coerenza costruita in oltre dieci anni di attività.</p>
+    </div>
+  </section>
 
-  <div class="grid">
-    <a class="card" href="./brand-guidelines.html">
-      <p class="t">Brand Guidelines</p>
-      <p class="d">Identità, posizionamento, mission, valori, target, numeri chiave, anti-obiettivi.</p>
-    </a>
-    <a class="card" href="./tone-of-voice.html">
-      <p class="t">Tone of Voice</p>
-      <p class="d">Come parla OKKO: persona, firma, do/don't, tono per canale, checklist pre-pubblicazione.</p>
-    </a>
-    <a class="card" href="./palette-colori.html">
-      <p class="t">Palette Colori</p>
-      <p class="d">Teal, Terracotta, Avorio e tutta la palette ufficiale. Logica strutturale vs accenti, regole d'uso.</p>
-    </a>
-    <a class="card" href="./font-e-tipografia.html">
-      <p class="t">Font &amp; Tipografia</p>
-      <p class="d">Arial/Helvetica per email, sans geometrica per sito. Gerarchia per email, sito, social.</p>
-    </a>
-    <a class="card" href="./moodboard-descrittivo.html">
-      <p class="t">Moodboard Descrittivo</p>
-      <p class="d">Atmosfera visiva, regole fotografiche, layout, negative prompt per AI image gen.</p>
-    </a>
-  </div>
+  <aside class="hub-meta">
+    <dl class="container">
+      <div><dt>Sede</dt><dd>Fiorano Modenese (MO)</dd></div>
+      <div><dt>Settore</dt><dd>Accessori smartphone</dd></div>
+      <div><dt>Canali</dt><dd>B2B attivo · B2C in lancio</dd></div>
+      <div><dt>Aggiornato</dt><dd>20 maggio 2026</dd></div>
+    </dl>
+  </aside>
 
-  <div class="footer">
-    <p class="payoff">Italian Design</p>
-    <p>OKKO Design — Fiorano Modenese (MO). Documenti interni. Vietato indicizzare, archiviare, usare per addestramento AI.</p>
-  </div>
+  <section class="docs-section">
+    <div class="container">
+      <header class="section-head">
+        <p class="section-kicker">I 5 documenti</p>
+        <h2 class="section-title">Il sistema brand, in ordine di lettura</h2>
+      </header>
+
+      <div class="docs-grid">
+        <a class="doc-card" href="./brand-guidelines.html">
+          <span class="doc-num">01 · Identità</span>
+          <span class="doc-title">Brand Guidelines</span>
+          <span class="doc-desc">Posizionamento, mission, valori, target e numeri chiave. Il punto di partenza per capire chi è OKKO e cosa lo distingue.</span>
+          <span class="doc-arrow">Leggi <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="doc-card" href="./tone-of-voice.html">
+          <span class="doc-num">02 · Voce</span>
+          <span class="doc-title">Tone of Voice</span>
+          <span class="doc-desc">Come parla OKKO: persona, firma, do/don't, tono per canale. Quando OKKO scrive, parla Riccardo.</span>
+          <span class="doc-arrow">Leggi <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="doc-card" href="./palette-colori.html">
+          <span class="doc-num">03 · Colore</span>
+          <span class="doc-title">Palette Colori</span>
+          <span class="doc-desc">Teal, Terracotta, Avorio e tutta la palette ufficiale. Logica strutturale vs accenti, regole d'uso e contrasto.</span>
+          <span class="doc-arrow">Leggi <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="doc-card" href="./font-e-tipografia.html">
+          <span class="doc-num">04 · Tipografia</span>
+          <span class="doc-title">Font &amp; Tipografia</span>
+          <span class="doc-desc">Arial/Helvetica per email, sans geometrica per sito. Gerarchia per email, sito e social.</span>
+          <span class="doc-arrow">Leggi <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="doc-card" href="./moodboard-descrittivo.html">
+          <span class="doc-num">05 · Atmosfera</span>
+          <span class="doc-title">Moodboard Descrittivo</span>
+          <span class="doc-desc">Atmosfera visiva, regole fotografiche, layout, anti-pattern. Pulito, concreto, italiano.</span>
+          <span class="doc-arrow">Leggi <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="palette-section" aria-label="Palette ufficiale">
+    <div class="container">
+      <header class="section-head">
+        <p class="section-kicker">Palette in sintesi</p>
+        <h2 class="section-title">I colori di OKKO</h2>
+      </header>
+      <div class="palette-grid">
+        <article class="swatch">
+          <div class="swatch-color" style="background:#2F6364"></div>
+          <div class="swatch-body">
+            <div class="swatch-name">Teal</div>
+            <div class="swatch-hex">#2F6364</div>
+          </div>
+        </article>
+        <article class="swatch">
+          <div class="swatch-color" style="background:#1C3B3C"></div>
+          <div class="swatch-body">
+            <div class="swatch-name">Teal scuro</div>
+            <div class="swatch-hex">#1C3B3C</div>
+          </div>
+        </article>
+        <article class="swatch">
+          <div class="swatch-color" style="background:#C46D5E"></div>
+          <div class="swatch-body">
+            <div class="swatch-name">Terracotta</div>
+            <div class="swatch-hex">#C46D5E</div>
+          </div>
+        </article>
+        <article class="swatch">
+          <div class="swatch-color" style="background:#F4E2DC"></div>
+          <div class="swatch-body">
+            <div class="swatch-name">Terracotta chiaro</div>
+            <div class="swatch-hex">#F4E2DC</div>
+          </div>
+        </article>
+        <article class="swatch">
+          <div class="swatch-color" style="background:#F9F8F6;border:1px solid #E5E0D8;"></div>
+          <div class="swatch-body">
+            <div class="swatch-name">Avorio</div>
+            <div class="swatch-hex">#F9F8F6</div>
+          </div>
+        </article>
+        <article class="swatch">
+          <div class="swatch-color" style="background:#0A0A0A"></div>
+          <div class="swatch-body">
+            <div class="swatch-name">Nero testo</div>
+            <div class="swatch-hex">#0A0A0A</div>
+          </div>
+        </article>
+        <article class="swatch">
+          <div class="swatch-color" style="background:#E5E0D8"></div>
+          <div class="swatch-body">
+            <div class="swatch-name">Bordo</div>
+            <div class="swatch-hex">#E5E0D8</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="identity-section">
+    <div class="container">
+      <header class="section-head">
+        <p class="section-kicker">In numeri</p>
+        <h2 class="section-title">Il patto con i rivenditori, in sintesi</h2>
+      </header>
+      <div class="identity-grid">
+        <div class="identity-stat">
+          <div class="num">10+</div>
+          <div class="label">Anni di attività con la rete rivenditori italiana</div>
+        </div>
+        <div class="identity-stat">
+          <div class="num">+91%</div>
+          <div class="label">Margine medio garantito al rivenditore</div>
+        </div>
+        <div class="identity-stat">
+          <div class="num">24h</div>
+          <div class="label">Tempo di spedizione per ordini ricevuti entro le 12:00</div>
+        </div>
+        <div class="identity-stat">
+          <div class="num">20 €</div>
+          <div class="label">Soglia ordine minimo, senza vincoli successivi</div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span class="footer-brand">OKKO Design</span>
+    <span class="footer-payoff">Italian Design</span>
+    <span class="footer-meta">Brand book interno · Vietato indicizzare · No AI training</span>
+  </div>
+</footer>
 </body>
 </html>
