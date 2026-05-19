@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Palette Colori — OKKO Design</title>
+<meta name="description" content="estratto da _fonti/assets/02 - Branding e Tone of Voice.md §2.1 (fonte ufficiale del titolare)">
+
+<!-- Anti-indicizzazione: motori di ricerca -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="bingbot" content="noindex, nofollow, noarchive">
+<meta name="googlebot-news" content="noindex, nofollow">
+
+<!-- Anti-training AI (best-effort, dove rispettato) -->
+<meta name="GPTBot" content="noindex, nofollow">
+<meta name="ChatGPT-User" content="noindex, nofollow">
+<meta name="OAI-SearchBot" content="noindex, nofollow">
+<meta name="ClaudeBot" content="noindex, nofollow">
+<meta name="anthropic-ai" content="noindex, nofollow">
+<meta name="Claude-Web" content="noindex, nofollow">
+<meta name="CCBot" content="noindex, nofollow">
+<meta name="Google-Extended" content="noindex, nofollow">
+<meta name="PerplexityBot" content="noindex, nofollow">
+<meta name="Applebot-Extended" content="noindex, nofollow">
+<meta name="Bytespider" content="noindex, nofollow">
+<meta name="Amazonbot" content="noindex, nofollow">
+<meta name="Meta-ExternalAgent" content="noindex, nofollow">
+
+<meta name="referrer" content="no-referrer">
+
+<style>
+  :root {
+    --navy: #1A2348;
+    --coral: #D85A30;
+    --coral-light: #FFF4E8;
+    --ivory: #FAFAF7;
+    --white: #FFFFFF;
+    --ink: #2C2C2A;
+    --muted: #888780;
+    --border: #E0DDD4;
+    --positive: #3B6D11;
+    --max-w: 880px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--ivory);
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+    background: var(--white);
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    min-height: 100vh;
+  }
+  .topbar {
+    max-width: var(--max-w);
+    margin: 0 auto 0;
+    padding: 16px 24px;
+    background: var(--navy);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+  .topbar .brand {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  .topbar .payoff {
+    color: var(--coral-light);
+    font-style: italic;
+  }
+  .topbar a {
+    color: var(--coral-light);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--coral-light);
+  }
+  h1, h2, h3, h4 {
+    color: var(--navy);
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 2em 0 0.6em;
+  }
+  h1 { font-size: 30px; margin-top: 0.4em; border-bottom: 2px solid var(--navy); padding-bottom: 12px; }
+  h2 { font-size: 22px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  h3 { font-size: 18px; }
+  h4 { font-size: 16px; }
+  p { margin: 0.8em 0; }
+  strong, b { color: var(--navy); }
+  em, i { color: var(--coral); font-style: italic; }
+  blockquote {
+    margin: 1.2em 0;
+    padding: 14px 18px;
+    background: var(--coral-light);
+    border-left: 4px solid var(--coral);
+    color: var(--ink);
+    border-radius: 0 4px 4px 0;
+  }
+  blockquote p { margin: 0.3em 0; }
+  blockquote strong { color: var(--navy); }
+  blockquote em { color: var(--coral); }
+  ul, ol { padding-left: 22px; margin: 0.8em 0; }
+  li { margin: 0.3em 0; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 2em 0; }
+  code {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 14px;
+    background: var(--ivory);
+    color: var(--navy);
+    padding: 2px 6px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+  }
+  pre {
+    background: var(--ivory);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--navy);
+    padding: 12px 14px;
+    overflow-x: auto;
+    border-radius: 3px;
+    margin: 1em 0;
+  }
+  pre code {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    font-size: 13px;
+    color: var(--ink);
+  }
+  a {
+    color: var(--coral);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  a:hover { border-bottom-color: var(--coral); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2em 0;
+    font-size: 14px;
+    background: var(--white);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  thead th {
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+  tbody tr:nth-child(even) td {
+    background: var(--ivory);
+  }
+  tbody tr:hover td {
+    background: var(--coral-light);
+  }
+  .meta {
+    background: var(--ivory);
+    border: 1px solid var(--border);
+    padding: 14px 18px;
+    margin: 0 0 24px;
+    font-size: 13px;
+    color: var(--muted);
+    border-radius: 3px;
+  }
+  .meta strong { color: var(--navy); }
+  .footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer .payoff {
+    color: var(--navy);
+    font-style: italic;
+    font-size: 14px;
+  }
+  ::selection { background: var(--coral); color: var(--white); }
+
+  @media (max-width: 720px) {
+    body { font-size: 15px; }
+    .page { padding: 32px 16px 64px; border-left: 0; border-right: 0; }
+    .topbar { padding: 14px 16px; font-size: 12px; }
+    h1 { font-size: 24px; }
+    h2 { font-size: 19px; }
+    h3 { font-size: 17px; }
+    table { font-size: 13px; }
+    th, td { padding: 8px 10px; }
+  }
+
+  @media print {
+    body { background: var(--white); }
+    .topbar { background: transparent; color: var(--navy); border-bottom: 2px solid var(--navy); }
+    .topbar a { color: var(--navy); }
+    .page { border: 0; padding: 24px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand">OKKO Design</span>
+  <span class="payoff">Italian Design</span>
+  <span><a href="./index.html">← Brand Hub</a></span>
+</div>
+<main class="page">
+<div class="meta">
+  <strong>Documento brand interno OKKO Design.</strong> Versione HTML pubblicata su GitHub Pages; sorgente in <code>_risorse/brand/</code>. Non destinato all'indicizzazione su motori di ricerca o training AI.
+</div>
+<h1>Palette Colori — OKKO Design</h1>
+<blockquote>
+<p>Documento aggiornato il 2026-05-19 a partire dalle fonti ufficiali fornite dal titolare. Sostituisce la v1 derivata da analisi sito + benchmark competitor.</p>
+<p>Cross-reference: <code>brand-guidelines.md</code> per posizionamento, <code>font-e-tipografia.md</code> per tipografia, <code>moodboard-descrittivo.md</code> per atmosfera visiva.</p>
+</blockquote>
+<hr>
+<h2>1. Palette ufficiale</h2>
+<table>
+<thead>
+<tr>
+<th>Nome</th>
+<th>HEX</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Navy OKKO</strong></td>
+<td><code>#1A2348</code></td>
+<td>Colore principale. Titoli, pulsanti CTA primari, sfondi scuri, parole chiave bold, navbar</td>
+</tr>
+<tr>
+<td><strong>Coral OKKO</strong></td>
+<td><code>#D85A30</code></td>
+<td>Accento. Numeri importanti, dettagli evidenziati, highlight (Starter Kit, codice sconto, evidenze hero)</td>
+</tr>
+<tr>
+<td><strong>Avorio</strong></td>
+<td><code>#FAFAF7</code></td>
+<td>Sfondi secondari, card prodotto, box informativi</td>
+</tr>
+<tr>
+<td><strong>Coral chiaro</strong></td>
+<td><code>#FFF4E8</code></td>
+<td>Sfondo card Starter Kit, evidenze hero più morbide</td>
+</tr>
+<tr>
+<td><strong>Bianco puro</strong></td>
+<td><code>#FFFFFF</code></td>
+<td>Sfondo principale email e pagine, foto prodotto cut-out</td>
+</tr>
+<tr>
+<td><strong>Grigio testo</strong></td>
+<td><code>#2C2C2A</code></td>
+<td>Testo corpo standard</td>
+</tr>
+<tr>
+<td><strong>Grigio medio</strong></td>
+<td><code>#888780</code></td>
+<td>Sottotitoli, didascalie, testi secondari</td>
+</tr>
+<tr>
+<td><strong>Grigio bordo</strong></td>
+<td><code>#E0DDD4</code></td>
+<td>Separatori sottili tra blocchi</td>
+</tr>
+<tr>
+<td><strong>Verde positivo</strong></td>
+<td><code>#3B6D11</code></td>
+<td><strong>Uso ristretto</strong>: solo per indicare margini % positivi nelle tabelle prodotto</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>2. Logica del sistema colori</h2>
+<ul>
+<li><strong>Navy</strong> è il colore <strong>strutturale</strong> — gerarchia, autorità del brand</li>
+<li><strong>Coral</strong> è il colore <strong>emotivo</strong> — cosa ti deve restare in testa</li>
+<li>Non si introducono nuovi colori senza giustificazione semantica</li>
+<li>Sul sito B2B Shopify la palette pratica vede anche tonalità più tech (es. <code>#1E3A6E</code> / <code>#2A4F9A</code>) per CTA e micro-accenti caldi gialli/arancio: sono varianti operative compatibili, <strong>ma il sistema di riferimento documentale è quello in tabella sopra</strong></li>
+</ul>
+<hr>
+<h2>3. Linee guida d'uso</h2>
+<h3>3.1 Proporzioni consigliate</h3>
+<table>
+<thead>
+<tr>
+<th>Colore</th>
+<th>Peso visivo consigliato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bianco / Avorio (sfondo)</td>
+<td>60-70% della superficie</td>
+</tr>
+<tr>
+<td>Navy (brand + struttura)</td>
+<td>20-30%</td>
+</tr>
+<tr>
+<td>Grigi (testo, bordi)</td>
+<td>5-10%</td>
+</tr>
+<tr>
+<td>Coral (accenti funzionali)</td>
+<td>max 5%</td>
+</tr>
+</tbody>
+</table>
+<h3>3.2 Regole di contrasto</h3>
+<ul>
+<li>Testo su sfondo bianco/avorio → grigio testo <code>#2C2C2A</code> o Navy <code>#1A2348</code> (contrasto minimo WCAG AA: 4.5:1)</li>
+<li>Testo su sfondo Navy → bianco</li>
+<li>Mai testo grigio medio (<code>#888780</code>) su sfondo bianco per blocchi di lettura → solo per metadata/didascalie</li>
+<li>Verificare sempre il contrasto dei badge Coral prima di pubblicare</li>
+</ul>
+<h3>3.3 Cosa non fare</h3>
+<ul>
+<li>❌ Aggiungere colori non presenti in questa palette per "vivacizzare" un contenuto</li>
+<li>❌ Usare sfumature o gradienti — il brand è flat e diretto</li>
+<li>❌ Usare Coral in grandi superfici — è accento, non sfondo</li>
+<li>❌ Duplicare il verde positivo su elementi non legati a un margine % — perde significato semantico</li>
+</ul>
+<hr>
+<h2>4. Note per gli agenti</h2>
+<ul>
+<li>Gli agenti che producono <strong>grafica</strong> (grafico, social-media-manager) usano esclusivamente i colori in tabella</li>
+<li>Il fotomontaggio prodotto va sempre su <strong>bianco puro</strong> o <strong>avorio</strong> — mai su sfondi colorati</li>
+<li>Nei template social l'accento cromatico può venire dal prodotto stesso (colore della cover), non dall'interfaccia grafica</li>
+<li>Il verde positivo <code>#3B6D11</code> è <strong>riservato ai margini %</strong> sulle tabelle listino — non riusarlo per badge promo o conferme generiche</li>
+</ul>
+<hr>
+<h2>5. Cross-reference</h2>
+<ul>
+<li>Posizionamento brand → <code>_risorse/brand/brand-guidelines.html</code></li>
+<li>Tono di voce → <code>_risorse/brand/tone-of-voice.html</code></li>
+<li>Font e tipografia → <code>_risorse/brand/font-e-tipografia.html</code></li>
+<li>Atmosfera visiva → <code>_risorse/brand/moodboard-descrittivo.html</code></li>
+<li>Fonte originale → <code>_fonti/assets/02 - Branding e Tone of Voice.md</code> §2.1</li>
+</ul>
+<div class="footer">
+  <p class="payoff">Italian Design</p>
+  <p>OKKO Design — Fiorano Modenese (MO). Documento ad uso interno. Vietato indicizzare, archiviare, usare per addestramento AI.</p>
+</div>
+</main>
+</body>
+</html>

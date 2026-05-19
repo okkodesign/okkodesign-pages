@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Font e Tipografia — OKKO Design</title>
+<meta name="description" content="estratto da _fonti/assets/02 - Branding e Tone of Voice.md §2.2-2.3-2.5 (fonte ufficiale del titolare)">
+
+<!-- Anti-indicizzazione: motori di ricerca -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="bingbot" content="noindex, nofollow, noarchive">
+<meta name="googlebot-news" content="noindex, nofollow">
+
+<!-- Anti-training AI (best-effort, dove rispettato) -->
+<meta name="GPTBot" content="noindex, nofollow">
+<meta name="ChatGPT-User" content="noindex, nofollow">
+<meta name="OAI-SearchBot" content="noindex, nofollow">
+<meta name="ClaudeBot" content="noindex, nofollow">
+<meta name="anthropic-ai" content="noindex, nofollow">
+<meta name="Claude-Web" content="noindex, nofollow">
+<meta name="CCBot" content="noindex, nofollow">
+<meta name="Google-Extended" content="noindex, nofollow">
+<meta name="PerplexityBot" content="noindex, nofollow">
+<meta name="Applebot-Extended" content="noindex, nofollow">
+<meta name="Bytespider" content="noindex, nofollow">
+<meta name="Amazonbot" content="noindex, nofollow">
+<meta name="Meta-ExternalAgent" content="noindex, nofollow">
+
+<meta name="referrer" content="no-referrer">
+
+<style>
+  :root {
+    --navy: #1A2348;
+    --coral: #D85A30;
+    --coral-light: #FFF4E8;
+    --ivory: #FAFAF7;
+    --white: #FFFFFF;
+    --ink: #2C2C2A;
+    --muted: #888780;
+    --border: #E0DDD4;
+    --positive: #3B6D11;
+    --max-w: 880px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--ivory);
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+    background: var(--white);
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    min-height: 100vh;
+  }
+  .topbar {
+    max-width: var(--max-w);
+    margin: 0 auto 0;
+    padding: 16px 24px;
+    background: var(--navy);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+  .topbar .brand {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  .topbar .payoff {
+    color: var(--coral-light);
+    font-style: italic;
+  }
+  .topbar a {
+    color: var(--coral-light);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--coral-light);
+  }
+  h1, h2, h3, h4 {
+    color: var(--navy);
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 2em 0 0.6em;
+  }
+  h1 { font-size: 30px; margin-top: 0.4em; border-bottom: 2px solid var(--navy); padding-bottom: 12px; }
+  h2 { font-size: 22px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  h3 { font-size: 18px; }
+  h4 { font-size: 16px; }
+  p { margin: 0.8em 0; }
+  strong, b { color: var(--navy); }
+  em, i { color: var(--coral); font-style: italic; }
+  blockquote {
+    margin: 1.2em 0;
+    padding: 14px 18px;
+    background: var(--coral-light);
+    border-left: 4px solid var(--coral);
+    color: var(--ink);
+    border-radius: 0 4px 4px 0;
+  }
+  blockquote p { margin: 0.3em 0; }
+  blockquote strong { color: var(--navy); }
+  blockquote em { color: var(--coral); }
+  ul, ol { padding-left: 22px; margin: 0.8em 0; }
+  li { margin: 0.3em 0; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 2em 0; }
+  code {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 14px;
+    background: var(--ivory);
+    color: var(--navy);
+    padding: 2px 6px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+  }
+  pre {
+    background: var(--ivory);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--navy);
+    padding: 12px 14px;
+    overflow-x: auto;
+    border-radius: 3px;
+    margin: 1em 0;
+  }
+  pre code {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    font-size: 13px;
+    color: var(--ink);
+  }
+  a {
+    color: var(--coral);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  a:hover { border-bottom-color: var(--coral); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2em 0;
+    font-size: 14px;
+    background: var(--white);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  thead th {
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+  tbody tr:nth-child(even) td {
+    background: var(--ivory);
+  }
+  tbody tr:hover td {
+    background: var(--coral-light);
+  }
+  .meta {
+    background: var(--ivory);
+    border: 1px solid var(--border);
+    padding: 14px 18px;
+    margin: 0 0 24px;
+    font-size: 13px;
+    color: var(--muted);
+    border-radius: 3px;
+  }
+  .meta strong { color: var(--navy); }
+  .footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer .payoff {
+    color: var(--navy);
+    font-style: italic;
+    font-size: 14px;
+  }
+  ::selection { background: var(--coral); color: var(--white); }
+
+  @media (max-width: 720px) {
+    body { font-size: 15px; }
+    .page { padding: 32px 16px 64px; border-left: 0; border-right: 0; }
+    .topbar { padding: 14px 16px; font-size: 12px; }
+    h1 { font-size: 24px; }
+    h2 { font-size: 19px; }
+    h3 { font-size: 17px; }
+    table { font-size: 13px; }
+    th, td { padding: 8px 10px; }
+  }
+
+  @media print {
+    body { background: var(--white); }
+    .topbar { background: transparent; color: var(--navy); border-bottom: 2px solid var(--navy); }
+    .topbar a { color: var(--navy); }
+    .page { border: 0; padding: 24px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand">OKKO Design</span>
+  <span class="payoff">Italian Design</span>
+  <span><a href="./index.html">← Brand Hub</a></span>
+</div>
+<main class="page">
+<div class="meta">
+  <strong>Documento brand interno OKKO Design.</strong> Versione HTML pubblicata su GitHub Pages; sorgente in <code>_risorse/brand/</code>. Non destinato all'indicizzazione su motori di ricerca o training AI.
+</div>
+<h1>Font e Tipografia — OKKO Design</h1>
+<blockquote>
+<p>Documento aggiornato il 2026-05-19 a partire dalle fonti ufficiali fornite dal titolare. Sostituisce la v1 derivata da analisi sito + benchmark competitor.</p>
+<p>Cross-reference: <code>palette-colori.md</code> per i colori del testo, <code>moodboard-descrittivo.md</code> per l'atmosfera visiva.</p>
+</blockquote>
+<hr>
+<h2>1. Principi tipografici del brand</h2>
+<p>La tipografia di OKKO Design deve trasmettere <strong>chiarezza, professionalità, italianità, vicinanza umana</strong>. Niente font decorativi, serif complessi o display eccentrici. La gerarchia è costruita con peso e dimensione, non con ornamento.</p>
+<p><strong>Regole generali:</strong></p>
+<ul>
+<li>Leggibilità prima di tutto</li>
+<li>Gerarchia chiara: H1 sempre più grande e più scuro del corpo, mai più di 3 livelli di gerarchia nella stessa view</li>
+<li>Pesi limitati: tipicamente 3 varianti (400 / 600 / 700)</li>
+<li>Nessun font decorativo o script</li>
+<li>Mobile-first</li>
+</ul>
+<hr>
+<h2>2. Font system ufficiale</h2>
+<h3>2.1 Font web-safe per email (obbligatorio)</h3>
+<pre><code>font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+</code></pre>
+<ul>
+<li><strong>Motivo della scelta</strong>: massima compatibilità Outlook, Gmail, Apple Mail, mobile</li>
+<li><strong>Vietato in email</strong>: Google Fonts (Outlook desktop non li supporta), font decorativi, serif</li>
+</ul>
+<h3>2.2 Font sito web</h3>
+<p>Sans-serif <strong>geometrica</strong>, peso 400/600/700, gerarchia chiara: H1 bold grande, sottotitolo medium, CTA uppercase bold. <strong>Stile tech-minimal istituzionale.</strong></p>
+<h3>2.3 Font catalogo / documenti istituzionali</h3>
+<p>Arial / Helvetica per coerenza con l'email. Se si vuole differenziare per stampa, possibile uso di una sans geometrica moderna (es. Inter, Aktiv Grotesk) ma solo previa decisione esplicita.</p>
+<hr>
+<h2>3. Regole tipografiche</h2>
+<ul>
+<li><strong>Gerarchia chiara</strong>: H1 sempre più grande e più scuro del corpo, mai più di 3 livelli di gerarchia nella stessa view</li>
+<li><strong>CTA in uppercase bold</strong>, ma frasi non in uppercase (evita effetto "urlo")</li>
+<li><strong>Allineamento testo</strong>: a sinistra in default, centrato solo per titoli hero e firme</li>
+<li><strong>Interlinea generosa</strong>: 1.4–1.6 per il corpo, 1.1–1.2 per i titoli grandi</li>
+</ul>
+<hr>
+<h2>4. Logo e icone (memo)</h2>
+<ul>
+<li>Il logo testuale è <strong>"OKKO DESIGN"</strong> in maiuscolo, peso bold, colore Navy <code>#1A2348</code></li>
+<li>Pay-off: <em>Italian Design</em> (sotto al wordmark, peso regular, color grigio medio)</li>
+<li>Le icone usate nei documenti istituzionali sono minimal lineari, non emoji colorate</li>
+</ul>
+<hr>
+<h2>5. Gerarchia tipografica per contesto</h2>
+<h3>5.1 Email marketing (Klaviyo)</h3>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Dimensione</th>
+<th>Peso</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oggetto email (subject)</td>
+<td>—</td>
+<td>—</td>
+<td>4–7 parole, nessun emoji in eccesso</td>
+</tr>
+<tr>
+<td>Preheader</td>
+<td>—</td>
+<td>—</td>
+<td>6–10 parole, complementare al subject</td>
+</tr>
+<tr>
+<td>Titolo email (H1)</td>
+<td>28-36px</td>
+<td>Bold (700)</td>
+<td></td>
+</tr>
+<tr>
+<td>Corpo</td>
+<td>16px</td>
+<td>Regular (400)</td>
+<td>Line-height 1.6</td>
+</tr>
+<tr>
+<td>CTA pulsante</td>
+<td>14-16px</td>
+<td>Bold (700)</td>
+<td>Uppercase, 2–4 parole</td>
+</tr>
+<tr>
+<td>Nota footer</td>
+<td>12px</td>
+<td>Regular (400)</td>
+<td>Grigio medio <code>#888780</code>, link unsubscribe</td>
+</tr>
+</tbody>
+</table>
+<h3>5.2 Sito web (Shopify B2B/B2C)</h3>
+<table>
+<thead>
+<tr>
+<th>Livello</th>
+<th>Uso</th>
+<th>Dimensione desktop</th>
+<th>Peso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1</td>
+<td>Titolo pagina / hero</td>
+<td>32-48px</td>
+<td>Bold (700)</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>Titoli sezione</td>
+<td>24-32px</td>
+<td>SemiBold (600)</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Sottotitoli, nome prodotto</td>
+<td>18-22px</td>
+<td>Medium/SemiBold (500-600)</td>
+</tr>
+<tr>
+<td>Body</td>
+<td>Descrizioni, testo corrente</td>
+<td>14-16px</td>
+<td>Regular (400) — line-height 1.5-1.6</td>
+</tr>
+<tr>
+<td>Small / Meta</td>
+<td>Prezzo secondario, note, SKU</td>
+<td>12-13px</td>
+<td>Regular (400)</td>
+</tr>
+<tr>
+<td>CTA / Bottone</td>
+<td>Testo bottoni azione</td>
+<td>14-16px</td>
+<td>Bold uppercase</td>
+</tr>
+</tbody>
+</table>
+<h3>5.3 Social media (post statici e video)</h3>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Dimensione (canvas 1080px)</th>
+<th>Peso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Headline principale</td>
+<td>60-90px</td>
+<td>Bold</td>
+</tr>
+<tr>
+<td>Sottotitolo / claim</td>
+<td>35-45px</td>
+<td>Regular o Medium</td>
+</tr>
+<tr>
+<td>Info prodotto / prezzo</td>
+<td>30-40px</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Logo / firma</td>
+<td>25-35px</td>
+<td>Bold</td>
+</tr>
+<tr>
+<td>Hashtag / URL</td>
+<td>20-25px</td>
+<td>Regular</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>6. Regole d'uso</h2>
+<h3>6.1 Tutto maiuscolo</h3>
+<ul>
+<li>✅ Per: badge, label categoria, CTA brevi ("SCRIVICI SU WHATSAPP", "VEDI I PREZZI VIP"), titoli piccoli</li>
+<li>❌ <strong>Mai</strong> per paragrafi di testo — illeggibile e gridato</li>
+<li>❌ <strong>Mai</strong> caps lock per dare urgenza ("ULTIMA POSSIBILITÀ!") — non è il nostro tono</li>
+</ul>
+<h3>6.2 Corsivo</h3>
+<ul>
+<li>Usare raramente e solo per enfasi semantica, mai per stile decorativo</li>
+<li>Nelle citazioni di mission/payoff (es. <em>Italian Design</em>) come dettaglio editoriale</li>
+</ul>
+<h3>6.3 Testo su immagini</h3>
+<ul>
+<li>Testo bianco su immagini scure (overlay scuro se necessario, min opacity 40%)</li>
+<li>Testo Navy su immagini chiare con sfondo quasi bianco</li>
+<li>Mai testo Coral su immagini come blocco di lettura — è colore d'accento, non di testo corrente</li>
+</ul>
+<hr>
+<h2>7. Fallback web-safe</h2>
+<p>In assenza di font custom o in contesti dove i font non si caricano:</p>
+<pre><code>font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+</code></pre>
+<p>Questo è lo stack standard email OKKO ed è anche un fallback sicuro per sito e social.</p>
+<hr>
+<h2>8. Cross-reference</h2>
+<ul>
+<li>Posizionamento brand → <code>_risorse/brand/brand-guidelines.html</code></li>
+<li>Tono di voce → <code>_risorse/brand/tone-of-voice.html</code></li>
+<li>Palette colori → <code>_risorse/brand/palette-colori.html</code></li>
+<li>Atmosfera visiva → <code>_risorse/brand/moodboard-descrittivo.html</code></li>
+<li>Fonte originale → <code>_fonti/assets/02 - Branding e Tone of Voice.md</code> §2.2-2.3-2.5</li>
+</ul>
+<div class="footer">
+  <p class="payoff">Italian Design</p>
+  <p>OKKO Design — Fiorano Modenese (MO). Documento ad uso interno. Vietato indicizzare, archiviare, usare per addestramento AI.</p>
+</div>
+</main>
+</body>
+</html>

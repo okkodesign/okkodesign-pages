@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brand Guidelines — OKKO Design</title>
+<meta name="description" content="estratto da _fonti/assets/01 - Chi è OKKO Design.md, 02 - Branding e Tone of Voice.md, 03 - Obiettivi.md (fonti ufficiali del titolare)">
+
+<!-- Anti-indicizzazione: motori di ricerca -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="bingbot" content="noindex, nofollow, noarchive">
+<meta name="googlebot-news" content="noindex, nofollow">
+
+<!-- Anti-training AI (best-effort, dove rispettato) -->
+<meta name="GPTBot" content="noindex, nofollow">
+<meta name="ChatGPT-User" content="noindex, nofollow">
+<meta name="OAI-SearchBot" content="noindex, nofollow">
+<meta name="ClaudeBot" content="noindex, nofollow">
+<meta name="anthropic-ai" content="noindex, nofollow">
+<meta name="Claude-Web" content="noindex, nofollow">
+<meta name="CCBot" content="noindex, nofollow">
+<meta name="Google-Extended" content="noindex, nofollow">
+<meta name="PerplexityBot" content="noindex, nofollow">
+<meta name="Applebot-Extended" content="noindex, nofollow">
+<meta name="Bytespider" content="noindex, nofollow">
+<meta name="Amazonbot" content="noindex, nofollow">
+<meta name="Meta-ExternalAgent" content="noindex, nofollow">
+
+<meta name="referrer" content="no-referrer">
+
+<style>
+  :root {
+    --navy: #1A2348;
+    --coral: #D85A30;
+    --coral-light: #FFF4E8;
+    --ivory: #FAFAF7;
+    --white: #FFFFFF;
+    --ink: #2C2C2A;
+    --muted: #888780;
+    --border: #E0DDD4;
+    --positive: #3B6D11;
+    --max-w: 880px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--ivory);
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+    background: var(--white);
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    min-height: 100vh;
+  }
+  .topbar {
+    max-width: var(--max-w);
+    margin: 0 auto 0;
+    padding: 16px 24px;
+    background: var(--navy);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+  .topbar .brand {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  .topbar .payoff {
+    color: var(--coral-light);
+    font-style: italic;
+  }
+  .topbar a {
+    color: var(--coral-light);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--coral-light);
+  }
+  h1, h2, h3, h4 {
+    color: var(--navy);
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 2em 0 0.6em;
+  }
+  h1 { font-size: 30px; margin-top: 0.4em; border-bottom: 2px solid var(--navy); padding-bottom: 12px; }
+  h2 { font-size: 22px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  h3 { font-size: 18px; }
+  h4 { font-size: 16px; }
+  p { margin: 0.8em 0; }
+  strong, b { color: var(--navy); }
+  em, i { color: var(--coral); font-style: italic; }
+  blockquote {
+    margin: 1.2em 0;
+    padding: 14px 18px;
+    background: var(--coral-light);
+    border-left: 4px solid var(--coral);
+    color: var(--ink);
+    border-radius: 0 4px 4px 0;
+  }
+  blockquote p { margin: 0.3em 0; }
+  blockquote strong { color: var(--navy); }
+  blockquote em { color: var(--coral); }
+  ul, ol { padding-left: 22px; margin: 0.8em 0; }
+  li { margin: 0.3em 0; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 2em 0; }
+  code {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 14px;
+    background: var(--ivory);
+    color: var(--navy);
+    padding: 2px 6px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+  }
+  pre {
+    background: var(--ivory);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--navy);
+    padding: 12px 14px;
+    overflow-x: auto;
+    border-radius: 3px;
+    margin: 1em 0;
+  }
+  pre code {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    font-size: 13px;
+    color: var(--ink);
+  }
+  a {
+    color: var(--coral);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  a:hover { border-bottom-color: var(--coral); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2em 0;
+    font-size: 14px;
+    background: var(--white);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  thead th {
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+  tbody tr:nth-child(even) td {
+    background: var(--ivory);
+  }
+  tbody tr:hover td {
+    background: var(--coral-light);
+  }
+  .meta {
+    background: var(--ivory);
+    border: 1px solid var(--border);
+    padding: 14px 18px;
+    margin: 0 0 24px;
+    font-size: 13px;
+    color: var(--muted);
+    border-radius: 3px;
+  }
+  .meta strong { color: var(--navy); }
+  .footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer .payoff {
+    color: var(--navy);
+    font-style: italic;
+    font-size: 14px;
+  }
+  ::selection { background: var(--coral); color: var(--white); }
+
+  @media (max-width: 720px) {
+    body { font-size: 15px; }
+    .page { padding: 32px 16px 64px; border-left: 0; border-right: 0; }
+    .topbar { padding: 14px 16px; font-size: 12px; }
+    h1 { font-size: 24px; }
+    h2 { font-size: 19px; }
+    h3 { font-size: 17px; }
+    table { font-size: 13px; }
+    th, td { padding: 8px 10px; }
+  }
+
+  @media print {
+    body { background: var(--white); }
+    .topbar { background: transparent; color: var(--navy); border-bottom: 2px solid var(--navy); }
+    .topbar a { color: var(--navy); }
+    .page { border: 0; padding: 24px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand">OKKO Design</span>
+  <span class="payoff">Italian Design</span>
+  <span><a href="./index.html">← Brand Hub</a></span>
+</div>
+<main class="page">
+<div class="meta">
+  <strong>Documento brand interno OKKO Design.</strong> Versione HTML pubblicata su GitHub Pages; sorgente in <code>_risorse/brand/</code>. Non destinato all'indicizzazione su motori di ricerca o training AI.
+</div>
+<h1>Brand Guidelines — OKKO Design</h1>
+<blockquote>
+<p>Documento aggiornato il 2026-05-19 a partire dalle fonti ufficiali fornite dal titolare. Sostituisce la v1 derivata da analisi sito + benchmark competitor.</p>
+</blockquote>
+<hr>
+<h2>1. Chi è OKKO Design</h2>
+<p>OKKO Design è un'azienda italiana di accessori per smartphone con sede a <strong>Fiorano Modenese (MO)</strong>, in Emilia-Romagna. Da <strong>10+ anni</strong> rifornisce i rivenditori di telefonia in tutta Italia tramite il portale wholesale <code>b2b.okkodesign.it</code>, ed è in fase di espansione verso il canale diretto al consumatore (B2C).</p>
+<h3>Identità anagrafica</h3>
+<table>
+<thead>
+<tr>
+<th>Voce</th>
+<th>Dato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ragione commerciale</td>
+<td><strong>OKKO Design</strong></td>
+</tr>
+<tr>
+<td>Tagline</td>
+<td><em>Italian Design</em></td>
+</tr>
+<tr>
+<td>Settore</td>
+<td>Accessori per smartphone (cover, vetri temperati, cavi, caricabatterie, auricolari, accessori vari)</td>
+</tr>
+<tr>
+<td>Sede operativa</td>
+<td>Fiorano Modenese (MO), Emilia-Romagna, Italia</td>
+</tr>
+<tr>
+<td>Anzianità</td>
+<td><strong>10+ anni di attività</strong></td>
+</tr>
+<tr>
+<td>Mercato principale</td>
+<td>Italia, con prospettiva di espansione europea sul canale B2C in seconda fase</td>
+</tr>
+<tr>
+<td>Canali commerciali attivi</td>
+<td>Portale B2B (<code>b2b.okkodesign.it</code>) + canale B2C in costruzione</td>
+</tr>
+<tr>
+<td>Email commerciale</td>
+<td><code>info@b2b.okkodesign.it</code></td>
+</tr>
+<tr>
+<td>WhatsApp Business</td>
+<td><strong>375-8841613</strong></td>
+</tr>
+<tr>
+<td>Referente commerciale</td>
+<td><strong>Riccardo Garofoli</strong> — Ufficio Commerciale OKKO Design</td>
+</tr>
+</tbody>
+</table>
+<h3>Cosa fa OKKO</h3>
+<p>OKKO <strong>progetta e distribuisce</strong> una gamma completa di accessori per smartphone, sviluppata internamente dalla sede italiana — dalla grafica al packaging. Non è un puro distributore di terzi: cura la selezione, la grafica di prodotto, il packaging e la verifica di compatibilità prima della messa in vendita. Tutti i prodotti sono certificati <strong>CE</strong>.</p>
+<h3>Categorie merceologiche</h3>
+<ul>
+<li><strong>Protezione</strong> — cover (silicone, TPU trasparente, MagSafe, glitter, custodie a libro), vetri temperati standard e privacy</li>
+<li><strong>Ricarica</strong> — cavi USB-C / Lightning, caricabatterie da rete, power bank</li>
+<li><strong>Audio</strong> — auricolari wired e wireless, accessori audio</li>
+<li><strong>Accessori vari</strong> — supporti, holder, pellicole speciali, accessori complementari</li>
+</ul>
+<h3>Brand smartphone coperti</h3>
+<p>Apple iPhone · Samsung Galaxy · Xiaomi · Motorola · Oppo · Honor · Huawei · modelli universali</p>
+<hr>
+<h2>2. Modello di business</h2>
+<h3>2.1 Canale B2B — il core attuale</h3>
+<p>Il portale <code>b2b.okkodesign.it</code> è il <strong>canale principale</strong> di OKKO. Si rivolge a piccoli negozi di telefonia, riparatori, edicole, tabaccherie e altri rivenditori al dettaglio del settore mobile.</p>
+<p><strong>Funzionamento commerciale:</strong></p>
+<ul>
+<li>Registrazione del rivenditore → approvazione manuale dell'account</li>
+<li>Accesso al listino con prezzi netti, prezzi pubblici consigliati e margine % per ogni referenza</li>
+<li><strong>Ordine minimo: 20 €</strong> (no supplementi, no vincoli successivi)</li>
+<li><strong>Margini medi superiori al 90%</strong>, con punte oltre il +200% su alcuni best-seller (es. cover MagSafe, vetri temperati)</li>
+<li>Spedizione <strong>in giornata</strong> per ordini ricevuti entro le 12:00, con GLS, tracking completo, consegna in 24h lavorative</li>
+<li>Stock visibile in tempo reale sul portale</li>
+<li>Ogni rivenditore ha un <strong>agente di zona di riferimento</strong>, raggiungibile via telefono, WhatsApp ed email</li>
+</ul>
+<p><strong>I 3 punti di forza commerciali ufficiali del B2B</strong> (cardine di tutta la comunicazione):</p>
+<ol>
+<li><strong>Ordine minimo 20 €</strong> — soglia bassissima per il settore, senza vincoli successivi</li>
+<li><strong>Margini medi +100%</strong> — variabili per prodotto, più alti su best-seller</li>
+<li><strong>Starter Kit di benvenuto personalizzato</strong> — kit di omaggi fisici configurato con il commerciale (via WhatsApp/telefono) sul primo ordine. È un beneficio <strong>distinto e cumulabile</strong> con il codice sconto <strong>BENVENUTO10</strong> (10% per 7 giorni, automatico)</li>
+</ol>
+<h3>2.2 Canale B2C — in costruzione</h3>
+<p>In piano di lancio uno <strong>store Shopify B2C</strong> per vendita diretta al consumatore finale:</p>
+<ul>
+<li>Architettura <strong>device-first</strong> ispirata a <code>puro.it</code> — l'utente arriva trovando subito gli accessori per il proprio modello</li>
+<li>Catalogo strutturato in logica <strong>padre/figlio</strong>: ogni prodotto padre con varianti modello + colore</li>
+<li>Mercato di riferimento: Italia, con espansione europea in seconda fase</li>
+<li>Tema premium con layout editoriali e color blocking come differenziatore visivo OKKO</li>
+<li>Timeline stimata: 8–10 settimane dal kick-off al go-live</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Stato attuale</strong>: progetto pianificato, non ancora in produzione attiva al 2026-05-19.</p>
+</blockquote>
+<hr>
+<h2>3. Posizionamento</h2>
+<h3>3.1 Frase di posizionamento</h3>
+<blockquote>
+<p><em>"Italian Design."</em></p>
+</blockquote>
+<h3>3.2 Tagline operative ricorrenti</h3>
+<ul>
+<li><em>"Più vendite, meno pensieri."</em></li>
+<li><em>"Prodotti aggiornati, spedizione veloce, prezzi convenienti."</em></li>
+</ul>
+<h3>3.3 Quadrante competitivo</h3>
+<blockquote>
+<p><strong>"Hermès, non MediaWorld."</strong><br>
+<strong>"Rimowa per gli accessori di telefonia, non volantino del supermercato."</strong></p>
+</blockquote>
+<p>OKKO si posiziona nel quadrante <strong>premium ma accessibile</strong>:</p>
+<ul>
+<li><strong>Sopra</strong> il distributore low-cost generico (logica volantino, prezzi aggressivi, qualità inconsistente)</li>
+<li><strong>Sotto</strong> il brand di lusso da gadget store (Apple-only, prezzo proibitivo per rivenditori, packaging da regalo)</li>
+<li><strong>Affianco</strong> ad attori come <code>puro.it</code> per l'architettura device-first nel B2C</li>
+</ul>
+<p>L'identità è italiana, riconoscibile, professionale, mai aggressiva.</p>
+<h3>3.4 Metafore di brief</h3>
+<table>
+<thead>
+<tr>
+<th>✅ Siamo come</th>
+<th>❌ Non siamo come</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hermès</td>
+<td>MediaWorld</td>
+</tr>
+<tr>
+<td>Rimowa (accessori telefonia)</td>
+<td>Volantino del supermercato</td>
+</tr>
+<tr>
+<td>Puro.it (per architettura device-first B2C)</td>
+<td>Discount low-cost generico</td>
+</tr>
+<tr>
+<td>Una boutique italiana ben curata</td>
+<td>Un grossista anonimo</td>
+</tr>
+</tbody>
+</table>
+<p>Queste metafore sono <strong>strumenti di brief</strong>: si usano internamente con freelance, grafici, copywriter per allineare la direzione senza ambiguità.</p>
+<hr>
+<h2>4. Mission e valori</h2>
+<h3>4.1 Missione dichiarata</h3>
+<blockquote>
+<p><strong>Rendere semplice la vita di chi vende telefonia.</strong></p>
+<p>Gamma sempre aggiornata per i modelli del momento, prezzi che lasciano un margine concreto al rivenditore, e un'organizzazione logistica pensata per chi non può permettersi di fermarsi. Ogni giorno lavoriamo per essere il partner che non crea problemi, ma li risolve.</p>
+<p><em>Made in Italy nello stile e nella gestione. Certificazione CE su tutti i prodotti. Relazioni umane, non solo commerciali.</em></p>
+</blockquote>
+<h3>4.2 I 5 valori aziendali</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Valore</th>
+<th>Sintesi operativa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td><strong>Qualità senza compromessi</strong></td>
+<td>Ogni referenza viene selezionata e testata prima di entrare in catalogo. Standard interno: il rivenditore non deve mai ricevere un reso per difetto di fabbricazione.</td>
+</tr>
+<tr>
+<td>02</td>
+<td><strong>Trasparenza commerciale</strong></td>
+<td>Prezzi chiari, margini dichiarati, nessun costo nascosto. Il listino B2B mostra prezzo di acquisto, prezzo pubblico consigliato e margine % per ogni prodotto.</td>
+</tr>
+<tr>
+<td>03</td>
+<td><strong>Velocità e affidabilità</strong></td>
+<td>Ordini ricevuti entro le 12:00 spediti il giorno stesso via GLS. Tracking dettagliato. Stock live in tempo reale sul portale.</td>
+</tr>
+<tr>
+<td>04</td>
+<td><strong>Supporto umano, non un call center</strong></td>
+<td>Ogni rivenditore ha un agente di zona di riferimento. Assistenza via telefono, WhatsApp ed email. Risposte rapide da persone reali.</td>
+</tr>
+<tr>
+<td>05</td>
+<td><strong>Accessibilità commerciale</strong></td>
+<td>Ordine minimo 20€, nessun vincolo successivo, condizioni pensate anche per chi gestisce un piccolo negozio.</td>
+</tr>
+</tbody>
+</table>
+<h3>4.3 I 4 pilastri operativi quotidiani</h3>
+<ol>
+<li><strong>Ordini</strong> — entro le 12:00 spediti il giorno stesso con GLS, consegna in 24h lavorative con tracking completo</li>
+<li><strong>Stock</strong> — disponibilità aggiornata in tempo reale sul portale. Nessun preordine, nessuna attesa: quello che vedi è quello che spediamo</li>
+<li><strong>Supporto</strong> — ogni rivenditore ha un agente di zona di riferimento, raggiungibile via telefono, WhatsApp e mail. <em>Non un numero verde, ma una persona con un nome</em></li>
+<li><strong>Catalogo</strong> — aggiornato continuamente con i nuovi modelli smartphone in arrivo. Compatibilità verificata internamente prima della messa in vendita</li>
+</ol>
+<h3>4.4 Cultura della relazione</h3>
+<p>Il portale <code>b2b.okkodesign.it</code> <strong>non è nato come scelta di marketing</strong>, ma da una richiesta esplicita arrivata dai rivenditori storici: poter ordinare quando serve, anche la sera, anche dopo aver chiuso il negozio.</p>
+<p>Molti rivenditori storici sono diventati <strong>amici prima che clienti</strong>. Questa vicinanza umana — non retorica, ma operativa — è uno dei differenziali competitivi più importanti dell'azienda e si traduce in scelte concrete: agente di zona personale invece di call center, ordine minimo bassissimo, supporto WhatsApp diretto, kit di omaggi configurato a voce.</p>
+<hr>
+<h2>5. Target audience</h2>
+<h3>5.1 Pubblico B2B (attuale)</h3>
+<p><strong>Cliente tipo</strong>: il rivenditore italiano di telefonia di piccola/media dimensione.</p>
+<ul>
+<li>Profilo: imprenditore o gestore di negozio fisico, spesso con 1–3 collaboratori</li>
+<li>Età media: 30–55 anni</li>
+<li>Caratteristiche comportamentali:</li>
+<li>Decide rapidamente nei primi 3 giorni se inserire un fornitore in shortlist</li>
+<li>Preferisce confermare via <strong>WhatsApp</strong> prima di ordinare online</li>
+<li>È <strong>sensibile al margine reale</strong>, non agli sconti percentuali astratti</li>
+<li>È <strong>diffidente al linguaggio aggressivo</strong> e premia la consulenzialità</li>
+<li>Compra da <strong>persone</strong>, non da brand impersonali → la firma personale conta</li>
+<li>Pain point principali: trovare prodotti compatibili con i modelli nuovi senza attese, ottenere margini reali, avere supporto umano in tempi rapidi</li>
+</ul>
+<h3>5.2 Pubblico B2C (in costruzione)</h3>
+<p><strong>Cliente tipo</strong>: il consumatore italiano che cerca accessori per il proprio smartphone.</p>
+<ul>
+<li>Profilo: utente che parte dal modello del proprio telefono e cerca cover/accessori compatibili</li>
+<li>Comportamento di navigazione device-first → priorità all'architettura per modello</li>
+<li>Sensibile a design, qualità percepita, packaging</li>
+<li>Mercato di riferimento iniziale: Italia, con espansione europea successiva</li>
+</ul>
+<hr>
+<h2>6. Numeri chiave</h2>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Valore</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anni di attività</td>
+<td>10+</td>
+</tr>
+<tr>
+<td>Referenze catalogo</td>
+<td>60+ famiglie di prodotto, 5.000+ varianti SKU</td>
+</tr>
+<tr>
+<td>Margine medio per il rivenditore</td>
+<td><strong>+91%</strong></td>
+</tr>
+<tr>
+<td>Margini di picco (best-seller)</td>
+<td>+200% / +280% (cover MagSafe), fino a +499% (vetri temperati)</td>
+</tr>
+<tr>
+<td>Spedizione</td>
+<td>24h lavorative</td>
+</tr>
+<tr>
+<td>Soglia ordine minimo B2B</td>
+<td>20 €</td>
+</tr>
+<tr>
+<td>Sconto benvenuto B2B (codice BENVENUTO10)</td>
+<td>10%, valido 7 giorni</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>7. Cosa NON è OKKO (delimitazioni esplicite)</h2>
+<p>Per evitare drift di posizionamento e di comunicazione:</p>
+<ul>
+<li>❌ Un brand premium/lifestyle (no "your phone, your art", no collab con artisti)</li>
+<li>❌ Un brand tecnico/iper-protettivo (no "drop test 9 metri", no "military grade")</li>
+<li>❌ Un brand giovanilistico/Gen Z (no emoji invadenti, no slang forzato, no meme)</li>
+<li>❌ Un brand corporate (no "soluzioni tecnologiche all'avanguardia", no aziendalese)</li>
+<li>❌ Un distributore low-cost (logica volantino, prezzi aggressivi, qualità inconsistente)</li>
+</ul>
+<h3>Anti-obiettivi strategici</h3>
+<ul>
+<li><strong>Non puntare al volume di iscritti</strong> a discapito della qualità della relazione</li>
+<li><strong>Non scendere sul prezzo</strong> per inseguire i distributori low-cost. Il posizionamento è premium-accessibile, non discount</li>
+<li><strong>Non automatizzare la relazione umana</strong>: l'agente di zona resta una persona, non un numero verde</li>
+<li><strong>Non aprire troppi canali contemporaneamente</strong>: B2B e B2C richiedono governance separata e ordinata</li>
+<li><strong>Non costruire campagne sullo sconto come leva principale</strong>: lo sconto è uno strumento, il margine reale è la promessa</li>
+</ul>
+<hr>
+<h2>8. Persone e firma commerciale</h2>
+<table>
+<thead>
+<tr>
+<th>Ruolo</th>
+<th>Persona</th>
+<th>Cosa fa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Commerciale &amp; strategia operativa</td>
+<td><strong>Riccardo Garofoli</strong></td>
+<td>Gestisce le operazioni commerciali, è il referente unico nelle comunicazioni B2B, firma personalmente le email del flusso di benvenuto, coordina i progetti di evoluzione</td>
+</tr>
+<tr>
+<td>Implementazione tecnica Shopify/Klaviyo</td>
+<td>Collaboratore interno</td>
+<td>Configura e mantiene la parte tecnica Shopify e Klaviyo. Referente tecnico, non strategico</td>
+</tr>
+<tr>
+<td>Direzione strategica progetti</td>
+<td><strong>Claude (AI)</strong></td>
+<td>Project director con autorità strategica sui progetti email marketing e affini, su richiesta di Riccardo</td>
+</tr>
+<tr>
+<td>Esecuzione grafica/fotografica</td>
+<td>Freelance/agenzia esterna</td>
+<td>Su specifici progetti, con scope strettamente esecutivo</td>
+</tr>
+</tbody>
+</table>
+<h3>Firma commerciale ufficiale</h3>
+<table>
+<thead>
+<tr>
+<th>Contesto</th>
+<th>Firma esatta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Email standard, comunicazioni operative, flussi automatici</td>
+<td><code>Riccardo — OKKO Design</code></td>
+</tr>
+<tr>
+<td>Email istituzionale "chi siamo", comunicazioni formali ai partner</td>
+<td><code>Riccardo Garofoli — Ufficio Commerciale OKKO Design</code></td>
+</tr>
+<tr>
+<td><strong>VIETATO</strong></td>
+<td>"Il Team OKKO", "OKKO Staff", "L'ufficio commerciale" senza nome, firme generiche</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Regola d'oro</strong>: i B2B comprano da persone. Ogni email firmata in modo impersonale è un'occasione persa di costruire relazione.</p>
+</blockquote>
+<hr>
+<h2>9. Stack tecnologico</h2>
+<table>
+<thead>
+<tr>
+<th>Funzione</th>
+<th>Strumento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E-commerce (B2B)</td>
+<td><strong>Shopify Standard</strong></td>
+</tr>
+<tr>
+<td>Gestione B2B su Shopify</td>
+<td><strong>BSS B2B Solution</strong> (approvazione manuale dei rivenditori)</td>
+</tr>
+<tr>
+<td>Email marketing &amp; automation</td>
+<td><strong>Klaviyo</strong> (integrato con Shopify)</td>
+</tr>
+<tr>
+<td>Dominio principale</td>
+<td><code>b2b.okkodesign.it</code></td>
+</tr>
+<tr>
+<td>Hosting / DNS</td>
+<td><strong>Aruba Business</strong> (<code>admin.aruba.it</code>)</td>
+</tr>
+<tr>
+<td>WhatsApp Business</td>
+<td>Numero 375-8841613, integrato nei flussi email come canale di assistenza diretta</td>
+</tr>
+</tbody>
+</table>
+<h3>Stato deliverability email (criticità nota)</h3>
+<ul>
+<li>Mittente storico configurato come <code>no-reply@b2b.okkodesign.it</code> — sender non-replicabile, da rivedere</li>
+<li>Invio storicamente da <code>shared.klaviyomail.com</code> (shared sending domain → maggior rischio spam)</li>
+<li>Necessaria verifica indipendente di <strong>SPF / DKIM / DMARC</strong> e attivazione branded sending domain su Klaviyo</li>
+<li>Tool di verifica raccomandato: <code>mail-tester.com</code></li>
+</ul>
+<hr>
+<h2>10. Quadro strategico — 5 obiettivi aziendali</h2>
+<p>I 5 obiettivi strategici ufficiali OKKO sono il telaio sotto a tutta la roadmap:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Obiettivo strategico</th>
+<th>In una riga</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>Consolidare la rete rivenditori in Italia</td>
+<td>Qualità della relazione, non quantità degli iscritti</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>Ampliare il catalogo in anticipo sul mercato</td>
+<td>Mai farsi dire "non ce l'ho" dal rivenditore</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Rendere il portale B2B lo strumento principale di riordino</td>
+<td>Ordine in 2 minuti, autonomia totale</td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>Costruire una comunicazione B2B professionale e coerente</td>
+<td>Email automation, niente più dipendenza dalle chiamate</td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>Garantire margini reali e trasparenti ai rivenditori</td>
+<td>Margine medio rivenditore &gt;90% non è una variabile, è il patto</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Principio guida operativo</strong><br>
+<em>"Preferiamo 200 rivenditori che ordinano ogni settimana a 2.000 che ordinano una volta."</em></p>
+</blockquote>
+<hr>
+<h2>11. Cross-reference</h2>
+<ul>
+<li>Tono di voce → <code>_risorse/brand/tone-of-voice.html</code></li>
+<li>Palette colori → <code>_risorse/brand/palette-colori.html</code></li>
+<li>Font e tipografia → <code>_risorse/brand/font-e-tipografia.html</code></li>
+<li>Moodboard → <code>_risorse/brand/moodboard-descrittivo.html</code></li>
+<li>Fonti originali → <code>_fonti/assets/01 - Chi è OKKO Design.md</code>, <code>02 - Branding e Tone of Voice.md</code>, <code>03 - Obiettivi Breve Medio Lungo Termine.md</code></li>
+</ul>
+<div class="footer">
+  <p class="payoff">Italian Design</p>
+  <p>OKKO Design — Fiorano Modenese (MO). Documento ad uso interno. Vietato indicizzare, archiviare, usare per addestramento AI.</p>
+</div>
+</main>
+</body>
+</html>
