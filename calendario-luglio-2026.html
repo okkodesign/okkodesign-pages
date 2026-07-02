@@ -77,12 +77,10 @@ p { margin: 16px 0; }
 strong { color: var(--ink); font-weight: 600; }
 em { color: var(--accent); font-style: italic; }
 
-/* placeholder banner */
 .ph-banner { display: flex; align-items: flex-start; gap: 14px; margin: 24px 0 8px; padding: 18px 22px; border: 1px dashed var(--border-strong); border-radius: 10px; background: var(--ivory); font-size: 14.5px; color: var(--ink-soft); }
 .ph-banner .ph-ic { font-size: 20px; line-height: 1.2; }
 .ph-banner b { color: var(--ink); }
 
-/* feed grid mockup */
 .feedgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; max-width: 560px; margin: 26px auto 0; }
 .ftile { position: relative; aspect-ratio: 1/1; border-radius: 4px; background: var(--ivory); border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between; padding: 12px; overflow: hidden; }
 .ftile::after { content: "🖼"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 30px; opacity: 0.12; }
@@ -92,18 +90,17 @@ em { color: var(--accent); font-style: italic; }
 .ftile.p5 { border-top: 3px solid var(--ink); }
 .ftile .ft-day { position: relative; z-index: 1; font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
 .ftile .ft-title { position: relative; z-index: 1; font-size: 13.5px; font-weight: 700; color: var(--ink); line-height: 1.25; }
-.feed-cap { text-align: center; font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); margin-top: 12px; letter-spacing: 0.04em; }
+.feed-cap { text-align: center; font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); margin-top: 12px; letter-spacing: 0.02em; line-height: 1.6; }
 
-/* week divider */
 .weekdiv { display: flex; align-items: baseline; gap: 14px; margin: 72px 0 8px; padding-bottom: 14px; border-bottom: 2px solid var(--border); flex-wrap: wrap; }
 .weekdiv .wd-id { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--teal-ink); }
 .weekdiv .wd-title { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); }
 .weekdiv .wd-date { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); margin-left: auto; }
 
-/* post slide */
 .slide { display: grid; grid-template-columns: 300px 1fr; gap: 36px; margin: 40px 0; align-items: start; }
 .slide-img { aspect-ratio: 4/5; border: 2px dashed var(--border-strong); border-radius: 14px; background: var(--ivory); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center; padding: 20px; position: sticky; top: 96px; }
-.slide-img .si-ic { font-size: 30px; opacity: 0.5; }
+.slide-img.video { border-color: var(--teal); background: #F1FAFA; }
+.slide-img .si-ic { font-size: 30px; opacity: 0.55; }
 .slide-img .si-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 .slide-img .si-fmt { font-size: 12.5px; color: var(--ink-soft); font-weight: 600; }
 .slide-body { min-width: 0; }
@@ -112,16 +109,19 @@ em { color: var(--accent); font-style: italic; }
 .badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 9px; border-radius: 5px; }
 .badge .dot { width: 8px; height: 8px; border-radius: 50%; }
 .badge.ch-ig { background: var(--teal-soft); color: var(--teal-ink); } .badge.ch-ig .dot { background: var(--teal); }
+.badge.ch-fb { background: #E9EEF1; color: #3a5563; } .badge.ch-fb .dot { background: #3a6b82; }
+.badge.ch-tt { background: #ECEBE8; color: #2f2e2b; } .badge.ch-tt .dot { background: var(--ink); }
 .badge.ch-li { background: var(--accent-soft); color: #a1503f; } .badge.ch-li .dot { background: var(--accent); }
 .badge.pillar { background: var(--primary-soft); color: var(--primary); }
 .slide-copy { font-size: 15.5px; line-height: 1.6; color: var(--ink-soft); white-space: pre-line; }
+.slide-concept { margin-top: 12px; font-size: 14px; color: var(--muted); line-height: 1.5; }
+.slide-concept b { color: var(--teal-ink); }
 .slide-cta { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 14.5px; color: var(--ink-soft); }
 .slide-cta div { margin: 7px 0; }
 .slide-contacts { margin-top: 14px; font-size: 13.5px; color: var(--muted); }
 .slide-contacts b { color: var(--ink-soft); font-weight: 600; }
 .hashtags { margin-top: 12px; font-family: var(--font-mono); font-size: 12.5px; color: var(--teal-ink); word-break: break-word; }
 
-/* other channels compact */
 .otherbox { border: 1px solid var(--border); border-radius: 12px; padding: 22px 26px; margin: 22px 0; background: var(--white); }
 .otherbox h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; color: var(--ink); }
 .otherbox ul { padding-left: 22px; margin: 0; }
@@ -185,7 +185,7 @@ em { color: var(--accent); font-style: italic; }
       <a class="back-link" href="./piano-editoriale-social.html">← Torna al Piano editoriale</a>
       <p class="kicker">Calendario · Luglio 2026</p>
       <h1 class="page-title">I post di luglio</h1>
-      <p class="page-subtitle">Il piano editoriale nel format OKKO Comunicazione: prima il <em>feed Instagram</em> d'insieme, poi ogni post con il suo copy. Le immagini sono <em>placeholder</em> — per ora c'è il testo, il visual lo produrremo dopo.</p>
+      <p class="page-subtitle">Il piano editoriale nel format OKKO Comunicazione: prima il <em>feed Instagram</em> d'insieme, poi ogni post con il suo copy. Le immagini (e i video) sono <em>placeholder</em> — per ora c'è il testo, il visual lo produrremo dopo.</p>
     </div>
   </section>
 
@@ -194,11 +194,11 @@ em { color: var(--accent); font-style: italic; }
 
       <div class="ph-banner">
         <span class="ph-ic">🖼</span>
-        <span><b>Immagini in placeholder.</b> Ogni post qui sotto ha il copy pronto e un segnaposto per il visual, con formato e pillar indicati per chi lo creerà. I visual reali verranno prodotti in un secondo momento.</span>
+        <span><b>Visual in placeholder.</b> Ogni post ha il copy pronto e un segnaposto per il visual (🖼 immagine o 🎬 video), con formato e pillar indicati per chi lo creerà. I visual reali verranno prodotti in un secondo momento.</span>
       </div>
 
       <h2 id="feed">Feed Instagram — luglio</h2>
-      <p>Come si comporrà la griglia del mese (ordine di pubblicazione, dall'alto). 12 post, cadenza lun/mer/ven.</p>
+      <p>Come si comporrà la griglia del mese (ordine di pubblicazione, dall'alto). 12 post feed, cadenza lun/mer/ven.</p>
       <div class="feedgrid" aria-label="Mockup del feed Instagram di luglio">
         <div class="ftile p5"><span class="ft-day">6.07 · P5</span><span class="ft-title">Si riparte</span></div>
         <div class="ftile p2"><span class="ft-day">8.07 · P2</span><span class="ft-title">La gamma</span></div>
@@ -213,7 +213,7 @@ em { color: var(--accent); font-style: italic; }
         <div class="ftile p2"><span class="ft-day">29.07 · P2</span><span class="ft-title">MagSafe che piace</span></div>
         <div class="ftile p1"><span class="ft-day">31.07 · P1</span><span class="ft-title">Sempre pronti</span></div>
       </div>
-      <p class="feed-cap">In parallelo: LinkedIn 1 post/sett (martedì) · TikTok 2/sett · Facebook repurpose dei post IG.</p>
+      <p class="feed-cap">Ogni post Instagram esce anche su Facebook (repurpose).<br>In parallelo: LinkedIn 1 post/sett (martedì) · TikTok 2/sett (mer/ven), qui sotto nel calendario.</p>
 
       <!-- ============ S1 ============ -->
       <div class="weekdiv" id="s1"><span class="wd-id">S1 · Rilancio</span><span class="wd-title">Ri-attivazione Instagram</span><span class="wd-date">lun 6 – dom 12 lug</span></div>
@@ -222,7 +222,7 @@ em { color: var(--accent); font-style: italic; }
         <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Statico · P5</span></div>
         <div class="slide-body">
           <div class="slide-date">lunedì 6.07</div>
-          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge pillar">P5 · Brand</span></div>
+          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge ch-fb"><span class="dot"></span>Facebook</span><span class="badge pillar">P5 · Brand</span></div>
           <div class="slide-copy">Ci siamo presi una pausa. Ora ripartiamo, e vogliamo farlo per bene.
 
 Da qui in avanti ci trovi qui con costanza: cover, vetri e accessori per il tuo telefono, spiegati come si deve. Niente urla, niente offerte-lampo finte — solo roba che protegge e sta bene sul tuo modello, spedita dall'Italia.
@@ -238,10 +238,27 @@ Da qui in avanti ci trovi qui con costanza: cover, vetri e accessori per il tuo 
       </div>
 
       <div class="slide">
+        <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Immagine singola · B4</span></div>
+        <div class="slide-body">
+          <div class="slide-date">martedì 7.07</div>
+          <div class="slide-meta"><span class="badge ch-li"><span class="dot"></span>LinkedIn</span><span class="badge pillar">B4 · Autorità</span></div>
+          <div class="slide-copy">Siamo OKKO Design. Dal 2014 distribuiamo accessori per la telefonia — cover, vetri, cavi, ricarica — con oltre 1.200 referenze e spedizione in 24h dall'Italia.
+
+Ogni giorno lavoriamo con più di 300 rivenditori: negozi di telefonia, centri assistenza, piccole catene. A loro diamo margine reale, freschezza sui nuovi modelli (iPhone e Samsung disponibili al lancio) e una persona con cui parlare, non un numero verde.
+
+Da oggi raccontiamo anche qui il dietro le quinte: catalogo, logistica e come far girare bene lo scaffale degli accessori.
+
+Riccardo — OKKO Design</div>
+          <div class="slide-cta"><div>Niente emoji: registro professionale B2B.</div></div>
+          <div class="slide-contacts"><b>Contatti:</b> ✍️ DM · 💬 WhatsApp 375 884 1613 · 🔗 okkodesign.it</div>
+        </div>
+      </div>
+
+      <div class="slide">
         <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Carosello 5 slide · P2</span></div>
         <div class="slide-body">
           <div class="slide-date">mercoledì 8.07</div>
-          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge pillar">P2 · Estetica</span></div>
+          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge ch-fb"><span class="dot"></span>Facebook</span><span class="badge pillar">P2 · Estetica</span></div>
           <div class="slide-copy">Nel dubbio, partiamo dalle basi: cosa trovi da OKKO.
 
 → Cover trasparenti che non ingialliscono
@@ -260,10 +277,26 @@ Tutto pensato per il tuo modello e spedito dall'Italia.</div>
       </div>
 
       <div class="slide">
+        <div class="slide-img video"><span class="si-ic">🎬</span><span class="si-label">Video da creare</span><span class="si-fmt">TikTok verticale · P2</span></div>
+        <div class="slide-body">
+          <div class="slide-date">mercoledì 8.07</div>
+          <div class="slide-meta"><span class="badge ch-tt"><span class="dot"></span>TikTok</span><span class="badge pillar">P2 · Estetica</span></div>
+          <div class="slide-copy">Stesso telefono, faccia nuova. Cover glitter e MagSafe: guarda che differenza in 10 secondi.</div>
+          <div class="slide-concept"><b>🎬 Concept:</b> applicazione cover in primo piano, satisfying, hook nei primi 2s ("il tuo telefono a ottobre vs adesso"), audio di tendenza. Verticale, nativo.</div>
+          <div class="slide-cta">
+            <div>👉 Segui per altri consigli sul tuo telefono.</div>
+            <div>💬 Qual è la tua cover del momento?</div>
+          </div>
+          <div class="hashtags">#okkodesign #covertelefono #magsafe #satisfying</div>
+          <div class="slide-contacts"><b>Contatti:</b> 🔗 okkodesign.it</div>
+        </div>
+      </div>
+
+      <div class="slide">
         <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Carosello educational · P3</span></div>
         <div class="slide-body">
           <div class="slide-date">venerdì 10.07</div>
-          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge pillar">P3 · Educational</span></div>
+          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge ch-fb"><span class="dot"></span>Facebook</span><span class="badge pillar">P3 · Educational</span></div>
           <div class="slide-copy">Non tutti i vetri temperati sono uguali. Come scegliere quello giusto, in 4 punti.
 
 1. Copertura piena vs parziale
@@ -280,30 +313,25 @@ Tutto pensato per il tuo modello e spedito dall'Italia.</div>
       </div>
 
       <div class="slide">
-        <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Immagine singola · B4</span></div>
+        <div class="slide-img video"><span class="si-ic">🎬</span><span class="si-label">Video da creare</span><span class="si-fmt">TikTok verticale · P3</span></div>
         <div class="slide-body">
-          <div class="slide-date">martedì 7.07</div>
-          <div class="slide-meta"><span class="badge ch-li"><span class="dot"></span>LinkedIn</span><span class="badge pillar">B4 · Autorità</span></div>
-          <div class="slide-copy">Siamo OKKO Design. Dal 2014 distribuiamo accessori per la telefonia — cover, vetri, cavi, ricarica — con oltre 1.200 referenze e spedizione in 24h dall'Italia.
-
-Ogni giorno lavoriamo con più di 300 rivenditori: negozi di telefonia, centri assistenza, piccole catene. A loro diamo margine reale, freschezza sui nuovi modelli (iPhone e Samsung disponibili al lancio) e una persona con cui parlare, non un numero verde.
-
-Da oggi raccontiamo anche qui il dietro le quinte: catalogo, logistica e come far girare bene lo scaffale degli accessori.
-
-Riccardo — OKKO Design</div>
+          <div class="slide-date">venerdì 10.07</div>
+          <div class="slide-meta"><span class="badge ch-tt"><span class="dot"></span>TikTok</span><span class="badge pillar">P3 · Educational</span></div>
+          <div class="slide-copy">Quanto costa davvero proteggere il telefono? Cover + vetro: te lo mostriamo, prezzo alla mano.</div>
+          <div class="slide-concept"><b>🎬 Concept:</b> vetro e cover in mano, prezzo onesto a schermo, tono diretto senza hard sell. Verticale, nativo.</div>
           <div class="slide-cta">
-            <div>Niente emoji: registro professionale B2B.</div>
+            <div>👉 Segui per non spendere male.</div>
+            <div>💬 Quanto hai speso l'ultima volta?</div>
           </div>
-          <div class="slide-contacts"><b>Contatti:</b> ✍️ DM · 💬 WhatsApp 375 884 1613 · 🔗 okkodesign.it</div>
+          <div class="hashtags">#vetrotemperato #okkodesign #consiglitelefono #protezione</div>
+          <div class="slide-contacts"><b>Contatti:</b> 🔗 okkodesign.it</div>
         </div>
       </div>
 
       <div class="otherbox">
-        <h3>Altri canali — S1</h3>
+        <h3>Storie Instagram — S1</h3>
         <ul>
-          <li><strong>TikTok</strong> — mer 8: "Il tuo telefono a ottobre vs adesso" (applicazione cover glitter/MagSafe, satisfying) · ven 10: "Quanto costa proteggere davvero il telefono?"</li>
-          <li><strong>Facebook</strong> — repurpose dei 3 post Instagram della settimana.</li>
-          <li><strong>Storie IG</strong> — sondaggio modello · re-post UGC/recensione · dietro le quinte magazzino + box domande.</li>
+          <li>Sondaggio "qual è il tuo modello?" · re-post di una recensione/UGC · dietro le quinte magazzino + box domande.</li>
         </ul>
       </div>
 
@@ -314,7 +342,7 @@ Riccardo — OKKO Design</div>
         <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Statico · P1</span></div>
         <div class="slide-body">
           <div class="slide-date">lunedì 13.07</div>
-          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge pillar">P1 · Novità</span></div>
+          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge ch-fb"><span class="dot"></span>Facebook</span><span class="badge pillar">P1 · Novità</span></div>
           <div class="slide-copy">Hai cambiato telefono da poco? Probabile che la sua cover sia già qui.
 
 Copriamo i modelli nuovi appena escono — iPhone e Samsung in testa — con cover e vetri pronti a partire. Niente attese, niente "disponibile tra tre settimane".
@@ -330,10 +358,27 @@ Cerca il tuo modello sul sito: se è uscito, ce l'abbiamo già.</div>
       </div>
 
       <div class="slide">
+        <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Immagine singola · B1</span></div>
+        <div class="slide-body">
+          <div class="slide-date">martedì 14.07</div>
+          <div class="slide-meta"><span class="badge ch-li"><span class="dot"></span>LinkedIn</span><span class="badge pillar">B1 · Marginalità</span></div>
+          <div class="slide-copy">Parliamo di margini, con numeri veri.
+
+Sul nostro catalogo il margine medio per un rivenditore è intorno al +91%, e l'ordine minimo è 20€. Facile da comporre: 4 vetri più 2 cover e sei già oltre soglia, con prodotti che al banco girano tutti i giorni.
+
+Non vendiamo un sogno: vendiamo referenze che si rivendono, con la freschezza sui modelli nuovi che fa la differenza al lancio.
+
+Riccardo — OKKO Design</div>
+          <div class="slide-cta"><div>Registro B2B, niente emoji.</div></div>
+          <div class="slide-contacts"><b>Contatti:</b> ✍️ DM per il listino con i tuoi prezzi · 💬 WhatsApp 375 884 1613</div>
+        </div>
+      </div>
+
+      <div class="slide">
         <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Carosello · P2</span></div>
         <div class="slide-body">
           <div class="slide-date">mercoledì 15.07</div>
-          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge pillar">P2 · Estetica</span></div>
+          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge ch-fb"><span class="dot"></span>Facebook</span><span class="badge pillar">P2 · Estetica</span></div>
           <div class="slide-copy">Lo stesso telefono, tre versioni di te.
 
 → Trasparente, per chi vuole vedere il device com'è
@@ -351,10 +396,26 @@ La cover è l'accessorio che cambi più spesso: tienine più di una e scegli in 
       </div>
 
       <div class="slide">
+        <div class="slide-img video"><span class="si-ic">🎬</span><span class="si-label">Video da creare</span><span class="si-fmt">TikTok verticale · P2</span></div>
+        <div class="slide-body">
+          <div class="slide-date">mercoledì 15.07</div>
+          <div class="slide-meta"><span class="badge ch-tt"><span class="dot"></span>TikTok</span><span class="badge pillar">P2 · Estetica</span></div>
+          <div class="slide-copy">3 cover, 3 mood, 10 secondi. Team trasparente o team colore?</div>
+          <div class="slide-concept"><b>🎬 Concept:</b> cambio look rapido, una cover dopo l'altra a ritmo con l'audio. Hook: "scegli la tua in 10 secondi". Verticale, nativo.</div>
+          <div class="slide-cta">
+            <div>👉 Segui per l'ispirazione quotidiana.</div>
+            <div>💬 Quale monteresti oggi?</div>
+          </div>
+          <div class="hashtags">#cover #glitter #okkodesign #covertelefono</div>
+          <div class="slide-contacts"><b>Contatti:</b> 🔗 okkodesign.it</div>
+        </div>
+      </div>
+
+      <div class="slide">
         <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Carosello educational · P3</span></div>
         <div class="slide-body">
           <div class="slide-date">venerdì 17.07</div>
-          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge pillar">P3 · Educational</span></div>
+          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge ch-fb"><span class="dot"></span>Facebook</span><span class="badge pillar">P3 · Educational</span></div>
           <div class="slide-copy">"MagSafe" lo leggi ovunque, ma a cosa serve davvero? In breve.
 
 È un anello di magneti dietro al telefono (o dentro la cover) che ti fa attaccare al volo caricatore wireless, supporto da auto o portafoglio, senza incastri strani.
@@ -370,31 +431,24 @@ Serve a te se ricarichi spesso, usi il supporto in macchina o vuoi meno cavi in 
       </div>
 
       <div class="slide">
-        <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Immagine singola · B1</span></div>
+        <div class="slide-img video"><span class="si-ic">🎬</span><span class="si-label">Video da creare</span><span class="si-fmt">TikTok verticale · P1</span></div>
         <div class="slide-body">
-          <div class="slide-date">martedì 14.07</div>
-          <div class="slide-meta"><span class="badge ch-li"><span class="dot"></span>LinkedIn</span><span class="badge pillar">B1 · Marginalità</span></div>
-          <div class="slide-copy">Parliamo di margini, con numeri veri.
-
-Sul nostro catalogo il margine medio per un rivenditore è intorno al +91%, e l'ordine minimo è 20€. Facile da comporre: 4 vetri più 2 cover e sei già oltre soglia, con prodotti che al banco girano tutti i giorni.
-
-Non vendiamo un sogno: vendiamo referenze che si rivendono, con la freschezza sui modelli nuovi che fa la differenza al lancio.
-
-Riccardo — OKKO Design</div>
+          <div class="slide-date">venerdì 17.07</div>
+          <div class="slide-meta"><span class="badge ch-tt"><span class="dot"></span>TikTok</span><span class="badge pillar">P1 · Novità</span></div>
+          <div class="slide-copy">Telefono nuovo? La cover è già qui. Cerca il tuo modello, la trovi in un attimo.</div>
+          <div class="slide-concept"><b>🎬 Concept:</b> POV "mi è arrivato l'iPhone nuovo", si scarta e si monta cover+vetro. Hook: "prima cosa da fare col telefono nuovo". Verticale, nativo.</div>
           <div class="slide-cta">
-            <div>Registro B2B, niente emoji.</div>
+            <div>👉 Segui per non farti trovare impreparato.</div>
+            <div>💬 Che telefono hai adesso?</div>
           </div>
-          <div class="slide-contacts"><b>Contatti:</b> ✍️ DM per il listino con i tuoi prezzi · 💬 WhatsApp 375 884 1613</div>
+          <div class="hashtags">#coveriphone #okkodesign #covergalaxy #telefononuovo</div>
+          <div class="slide-contacts"><b>Contatti:</b> 🔗 okkodesign.it</div>
         </div>
       </div>
 
       <div class="otherbox">
-        <h3>Altri canali — S2</h3>
-        <ul>
-          <li><strong>TikTok</strong> — cambio look rapido (P2) · "ce l'abbiamo già" per un modello richiesto (P1).</li>
-          <li><strong>Facebook</strong> — repurpose dei 3 post Instagram.</li>
-          <li><strong>Storie IG</strong> — sondaggi colore, UGC, box domande.</li>
-        </ul>
+        <h3>Storie Instagram — S2</h3>
+        <ul><li>Sondaggi colore · re-post UGC · box domande.</li></ul>
       </div>
 
       <!-- ============ S3 ============ -->
@@ -404,7 +458,7 @@ Riccardo — OKKO Design</div>
         <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Statico · P2</span></div>
         <div class="slide-body">
           <div class="slide-date">lunedì 20.07</div>
-          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge pillar">P2 · Estetica</span></div>
+          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge ch-fb"><span class="dot"></span>Facebook</span><span class="badge pillar">P2 · Estetica</span></div>
           <div class="slide-copy">L'estate si vede anche dal telefono.
 
 Tinte chiare, trasparenti che non ingialliscono, tocchi di colore: la cover giusta è quella che ti fa sorridere quando prendi in mano il telefono.
@@ -420,10 +474,27 @@ Abbiamo decine di varianti colore per lo stesso modello — così scegli davvero
       </div>
 
       <div class="slide">
+        <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Immagine singola · B3</span></div>
+        <div class="slide-body">
+          <div class="slide-date">martedì 21.07</div>
+          <div class="slide-meta"><span class="badge ch-li"><span class="dot"></span>LinkedIn</span><span class="badge pillar">B3 · Affidabilità</span></div>
+          <div class="slide-copy">Nel nostro settore la differenza non la fa solo il prezzo: la fa la consegna.
+
+Spediamo in 24h con tracciatura, dall'Italia. Documentazione CE inclusa. E se qualcosa non torna, trovi una persona — non un modulo.
+
+Per un rivenditore questo significa scaffale sempre rifornito e meno grane con il cliente al banco.
+
+Riccardo — OKKO Design</div>
+          <div class="slide-cta"><div>Registro B2B, niente emoji.</div></div>
+          <div class="slide-contacts"><b>Contatti:</b> ✍️ DM · 💬 WhatsApp 375 884 1613</div>
+        </div>
+      </div>
+
+      <div class="slide">
         <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Statico / foto magazzino · P5</span></div>
         <div class="slide-body">
           <div class="slide-date">mercoledì 22.07</div>
-          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge pillar">P5 · Brand</span></div>
+          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge ch-fb"><span class="dot"></span>Facebook</span><span class="badge pillar">P5 · Brand</span></div>
           <div class="slide-copy">Dietro OKKO c'è un magazzino in Emilia, non un algoritmo dall'altra parte del mondo.
 
 Dal 2014 scegliamo, controlliamo e spediamo accessori per il telefono dall'Italia, con reso facile e qualcuno che ti risponde davvero se qualcosa non va.
@@ -441,10 +512,26 @@ Non siamo i più economici del web. Siamo quelli che ci mettono la faccia.
       </div>
 
       <div class="slide">
+        <div class="slide-img video"><span class="si-ic">🎬</span><span class="si-label">Video da creare</span><span class="si-fmt">TikTok verticale · P2</span></div>
+        <div class="slide-body">
+          <div class="slide-date">mercoledì 22.07</div>
+          <div class="slide-meta"><span class="badge ch-tt"><span class="dot"></span>TikTok</span><span class="badge pillar">P2 · Estetica</span></div>
+          <div class="slide-copy">POV: la tua cover fa l'estate. Colori chiari e trasparenti che non ingialliscono.</div>
+          <div class="slide-concept"><b>🎬 Concept:</b> carrellata di cover estive in luce naturale, ritmo veloce sull'audio del momento. Hook estetico nei primi 2s. Verticale, nativo.</div>
+          <div class="slide-cta">
+            <div>👉 Segui per l'ispirazione colore.</div>
+            <div>💬 Che colore cerchi per l'estate?</div>
+          </div>
+          <div class="hashtags">#covertelefono #coloridellestate #okkodesign</div>
+          <div class="slide-contacts"><b>Contatti:</b> 🔗 okkodesign.it</div>
+        </div>
+      </div>
+
+      <div class="slide">
         <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Carosello educational · P3</span></div>
         <div class="slide-body">
           <div class="slide-date">venerdì 24.07</div>
-          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge pillar">P3 · Educational</span></div>
+          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge ch-fb"><span class="dot"></span>Facebook</span><span class="badge pillar">P3 · Educational</span></div>
           <div class="slide-copy">USB-C, Lightning, micro-USB: quale cavo ti serve davvero? Regola veloce.
 
 → iPhone 15 e successivi, Android recenti: USB-C
@@ -462,30 +549,26 @@ E occhio alla qualità: un cavo buono carica prima e dura, uno scadente si sfila
       </div>
 
       <div class="slide">
-        <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Immagine singola · B3</span></div>
+        <div class="slide-img video"><span class="si-ic">🎬</span><span class="si-label">Video da creare</span><span class="si-fmt">TikTok verticale · P3</span></div>
         <div class="slide-body">
-          <div class="slide-date">martedì 21.07</div>
-          <div class="slide-meta"><span class="badge ch-li"><span class="dot"></span>LinkedIn</span><span class="badge pillar">B3 · Affidabilità</span></div>
-          <div class="slide-copy">Nel nostro settore la differenza non la fa solo il prezzo: la fa la consegna.
-
-Spediamo in 24h con tracciatura, dall'Italia. Documentazione CE inclusa. E se qualcosa non torna, trovi una persona — non un modulo.
-
-Per un rivenditore questo significa scaffale sempre rifornito e meno grane con il cliente al banco.
-
-Riccardo — OKKO Design</div>
+          <div class="slide-date">venerdì 24.07</div>
+          <div class="slide-meta"><span class="badge ch-tt"><span class="dot"></span>TikTok</span><span class="badge pillar">P3 · Educational</span></div>
+          <div class="slide-copy">USB-C, Lightning o micro-USB? 30 secondi per non sbagliare più il cavo.</div>
+          <div class="slide-concept"><b>🎬 Concept:</b> tre cavi in mano, si mostra l'attacco giusto per ogni telefono, testo a schermo. Utility veloce. Verticale, nativo.</div>
           <div class="slide-cta">
-            <div>Registro B2B, niente emoji.</div>
+            <div>👉 Segui per i consigli pratici.</div>
+            <div>💬 Che attacco ha il tuo?</div>
           </div>
-          <div class="slide-contacts"><b>Contatti:</b> ✍️ DM · 💬 WhatsApp 375 884 1613</div>
+          <div class="hashtags">#cavousbc #ricarica #okkodesign #consiglitelefono</div>
+          <div class="slide-contacts"><b>Contatti:</b> 🔗 okkodesign.it</div>
         </div>
       </div>
 
       <div class="otherbox">
-        <h3>Altri canali — S3</h3>
+        <h3>Storie & note — S3</h3>
         <ul>
-          <li><strong>TikTok</strong> — utility "il cavo giusto per il tuo iPhone" (P3) · trend estetico (P2).</li>
-          <li><strong>Facebook</strong> — repurpose dei 3 post Instagram.</li>
-          <li><strong>Analisi</strong> — 1º check KPI a metà mese: quali pillar/format performano, si aggiusta il mix.</li>
+          <li>Storie IG: risultati dei sondaggi, UGC, box domande.</li>
+          <li>1º check KPI a metà mese: quali pillar/format performano, si aggiusta il mix.</li>
         </ul>
       </div>
 
@@ -496,7 +579,7 @@ Riccardo — OKKO Design</div>
         <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Statico · P4</span></div>
         <div class="slide-body">
           <div class="slide-date">lunedì 27.07</div>
-          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge pillar">P4 · Promo</span></div>
+          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge ch-fb"><span class="dot"></span>Facebook</span><span class="badge pillar">P4 · Promo</span></div>
           <div class="slide-copy">Il nostro 3x2, senza trucchi: ne prendi 3, ne paghi 2. Lo sconto è sul prodotto meno caro.
 
 Funziona su cover, vetri e cavi: il momento giusto per fare scorta di quello che prima o poi ti serve — un vetro di ricambio, la cover per l'estate, un cavo in più per l'ufficio.
@@ -507,42 +590,6 @@ Nessun countdown, nessuna fretta finta: è lì quando ti serve.</div>
             <div>💬 Commenta qui sotto: cosa metteresti nei tre?</div>
           </div>
           <div class="hashtags">#okkodesign #3x2 #offertaonesta #accessoritelefonia</div>
-          <div class="slide-contacts"><b>Contatti:</b> ✍️ DM · 🔗 okkodesign.it</div>
-        </div>
-      </div>
-
-      <div class="slide">
-        <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Statico · P2</span></div>
-        <div class="slide-body">
-          <div class="slide-date">mercoledì 29.07</div>
-          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge pillar">P2 · Estetica</span></div>
-          <div class="slide-copy">Bella da vedere, comoda da usare: la cover MagSafe fa tutte e due.
-
-Protegge, si abbina al tuo stile e ti fa attaccare caricatore e accessori con un gesto. La praticità che non rinuncia all'estetica.
-
-Disponibile per i modelli più richiesti, in più finiture.</div>
-          <div class="slide-cta">
-            <div>📌 Salva il post per il prossimo acquisto.</div>
-            <div>💬 Commenta qui sotto: la proveresti?</div>
-          </div>
-          <div class="hashtags">#magsafe #cover #okkodesign #accessoriiphone</div>
-          <div class="slide-contacts"><b>Contatti:</b> ✍️ DM · 🔗 okkodesign.it</div>
-        </div>
-      </div>
-
-      <div class="slide">
-        <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Statico · P1</span></div>
-        <div class="slide-body">
-          <div class="slide-date">venerdì 31.07</div>
-          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge pillar">P1 · Novità</span></div>
-          <div class="slide-copy">Fine mese, ma il catalogo non dorme: i modelli nuovi trovano la loro protezione appena escono.
-
-Se stai per cambiare telefono, la cover e il vetro giusti sono già pronti — così proteggi il device dal primo giorno, non "quando arriva".</div>
-          <div class="slide-cta">
-            <div>📌 Salva il post per quando cambi telefono.</div>
-            <div>💬 Commenta qui sotto: che telefono ti prenderesti adesso?</div>
-          </div>
-          <div class="hashtags">#okkodesign #coversmartphone #vetrotemperato #novita</div>
           <div class="slide-contacts"><b>Contatti:</b> ✍️ DM · 🔗 okkodesign.it</div>
         </div>
       </div>
@@ -562,26 +609,89 @@ Se stai per cambiare telefono, la cover e il vetro giusti sono già pronti — c
 Nessun vincolo e nessuna trattativa infinita: apri l'account e ordini quando ti serve.
 
 Riccardo — OKKO Design</div>
-          <div class="slide-cta">
-            <div>Registro B2B, niente emoji. CTA di recruiting.</div>
-          </div>
+          <div class="slide-cta"><div>Registro B2B, niente emoji. CTA di recruiting.</div></div>
           <div class="slide-contacts"><b>Contatti:</b> ✍️ DM per il listino · 💬 WhatsApp 375 884 1613</div>
         </div>
       </div>
 
+      <div class="slide">
+        <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Statico · P2</span></div>
+        <div class="slide-body">
+          <div class="slide-date">mercoledì 29.07</div>
+          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge ch-fb"><span class="dot"></span>Facebook</span><span class="badge pillar">P2 · Estetica</span></div>
+          <div class="slide-copy">Bella da vedere, comoda da usare: la cover MagSafe fa tutte e due.
+
+Protegge, si abbina al tuo stile e ti fa attaccare caricatore e accessori con un gesto. La praticità che non rinuncia all'estetica.
+
+Disponibile per i modelli più richiesti, in più finiture.</div>
+          <div class="slide-cta">
+            <div>📌 Salva il post per il prossimo acquisto.</div>
+            <div>💬 Commenta qui sotto: la proveresti?</div>
+          </div>
+          <div class="hashtags">#magsafe #cover #okkodesign #accessoriiphone</div>
+          <div class="slide-contacts"><b>Contatti:</b> ✍️ DM · 🔗 okkodesign.it</div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-img video"><span class="si-ic">🎬</span><span class="si-label">Video da creare</span><span class="si-fmt">TikTok verticale · P4</span></div>
+        <div class="slide-body">
+          <div class="slide-date">mercoledì 29.07</div>
+          <div class="slide-meta"><span class="badge ch-tt"><span class="dot"></span>TikTok</span><span class="badge pillar">P4 · Promo</span></div>
+          <div class="slide-copy">3 prodotti, ne paghi 2. Come sfrutto il 3x2 senza sbagliare il carrello.</div>
+          <div class="slide-concept"><b>🎬 Concept:</b> si compone un carrello 3x2 passo passo (cover + vetro + cavo), testo a schermo con il "trucco" (lo sconto è sul meno caro). Onesto, niente urgenza finta. Verticale, nativo.</div>
+          <div class="slide-cta">
+            <div>👉 Segui per gli altri consigli.</div>
+            <div>💬 Cosa metteresti nei tre?</div>
+          </div>
+          <div class="hashtags">#okkodesign #3x2 #offerta #accessoritelefonia</div>
+          <div class="slide-contacts"><b>Contatti:</b> 🔗 okkodesign.it</div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-img"><span class="si-ic">🖼</span><span class="si-label">Immagine da creare</span><span class="si-fmt">Statico · P1</span></div>
+        <div class="slide-body">
+          <div class="slide-date">venerdì 31.07</div>
+          <div class="slide-meta"><span class="badge ch-ig"><span class="dot"></span>Instagram</span><span class="badge ch-fb"><span class="dot"></span>Facebook</span><span class="badge pillar">P1 · Novità</span></div>
+          <div class="slide-copy">Fine mese, ma il catalogo non dorme: i modelli nuovi trovano la loro protezione appena escono.
+
+Se stai per cambiare telefono, la cover e il vetro giusti sono già pronti — così proteggi il device dal primo giorno, non "quando arriva".</div>
+          <div class="slide-cta">
+            <div>📌 Salva il post per quando cambi telefono.</div>
+            <div>💬 Commenta qui sotto: che telefono ti prenderesti adesso?</div>
+          </div>
+          <div class="hashtags">#okkodesign #coversmartphone #vetrotemperato #novita</div>
+          <div class="slide-contacts"><b>Contatti:</b> ✍️ DM · 🔗 okkodesign.it</div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-img video"><span class="si-ic">🎬</span><span class="si-label">Video da creare</span><span class="si-fmt">TikTok verticale · P2</span></div>
+        <div class="slide-body">
+          <div class="slide-date">venerdì 31.07</div>
+          <div class="slide-meta"><span class="badge ch-tt"><span class="dot"></span>TikTok</span><span class="badge pillar">P2 · Estetica</span></div>
+          <div class="slide-copy">Fine mese, telefono con un look nuovo. Quale cover monteresti per agosto?</div>
+          <div class="slide-concept"><b>🎬 Concept:</b> cambio cover veloce, "reset look" di fine mese, audio di tendenza. Chiude invitando a scegliere nei commenti. Verticale, nativo.</div>
+          <div class="slide-cta">
+            <div>👉 Segui: ad agosto si riparte con le novità.</div>
+            <div>💬 Quale monteresti?</div>
+          </div>
+          <div class="hashtags">#cover #okkodesign #covertelefono #newlook</div>
+          <div class="slide-contacts"><b>Contatti:</b> 🔗 okkodesign.it</div>
+        </div>
+      </div>
+
       <div class="otherbox">
-        <h3>Altri canali — S4</h3>
-        <ul>
-          <li><strong>TikTok</strong> — "come sfruttare il 3x2" (P4) · cambio look (P2).</li>
-          <li><strong>Facebook</strong> — repurpose, incluso il 3x2.</li>
-          <li><strong>Storie IG</strong> — promo 3x2 con link, box domande.</li>
-        </ul>
+        <h3>Storie Instagram — S4</h3>
+        <ul><li>Promo 3x2 in storia con link · box domande.</li></ul>
       </div>
 
       <div class="callout">
         <h3>Note</h3>
         <ul>
-          <li>I copy sono pronti; le <strong>immagini sono placeholder</strong> — si producono in un secondo momento, seguendo formato e pillar indicati in ogni slide.</li>
+          <li>I copy sono pronti; i <strong>visual sono placeholder</strong> (🖼 immagine o 🎬 video) — si producono in un secondo momento, seguendo formato e pillar di ogni slide.</li>
+          <li>Ogni post Instagram esce anche su <strong>Facebook</strong> (stesso visual, stesso copy).</li>
           <li>Le date sono una griglia: se un visual non è pronto, si sposta il post — non si salta la settimana.</li>
           <li>Auto-check anti-slop su ogni copy prima di pubblicare; review brand se serve.</li>
         </ul>
