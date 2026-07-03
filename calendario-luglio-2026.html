@@ -91,6 +91,14 @@ em { color: var(--accent); font-style: italic; }
 .ftile .ft-day { position: relative; z-index: 1; font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
 .ftile .ft-title { position: relative; z-index: 1; font-size: 13.5px; font-weight: 700; color: var(--ink); line-height: 1.25; }
 .feed-cap { text-align: center; font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); margin-top: 12px; letter-spacing: 0.02em; line-height: 1.6; }
+.feed-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(24px, 3vw, 44px); align-items: start; margin: 26px 0 0; }
+.feed-layout .feedgrid { margin-top: 0; }
+.feed-style { margin: 0; position: sticky; top: 90px; }
+.feed-style img { width: 100%; height: auto; display: block; border-radius: 14px; box-shadow: 0 20px 48px -30px rgba(28,59,60,0.5); }
+.feed-style figcaption { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); margin-top: 12px; line-height: 1.6; text-align: center; }
+.feed-style figcaption a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(196,109,94,0.35); }
+.feed-style figcaption a:hover { border-bottom-color: var(--accent); }
+@media (max-width: 920px) { .feed-layout { grid-template-columns: 1fr; gap: 30px; } .feed-style { position: static; max-width: 340px; margin: 0 auto; } }
 
 .weekdiv { display: flex; align-items: baseline; gap: 14px; margin: 72px 0 8px; padding-bottom: 14px; border-bottom: 2px solid var(--border); flex-wrap: wrap; }
 .weekdiv .wd-id { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--teal-ink); }
@@ -199,21 +207,29 @@ em { color: var(--accent); font-style: italic; }
 
       <h2 id="feed">Feed Instagram — luglio</h2>
       <p>Come si comporrà la griglia del mese (ordine di pubblicazione, dall'alto). 12 post feed, cadenza lun/mer/ven.</p>
-      <div class="feedgrid" aria-label="Mockup del feed Instagram di luglio">
-        <div class="ftile p5"><span class="ft-day">6.07 · P5</span><span class="ft-title">Si riparte</span></div>
-        <div class="ftile p2"><span class="ft-day">8.07 · P2</span><span class="ft-title">La gamma</span></div>
-        <div class="ftile p3"><span class="ft-day">10.07 · P3</span><span class="ft-title">Il vetro giusto</span></div>
-        <div class="ftile p1"><span class="ft-day">13.07 · P1</span><span class="ft-title">Ce l'abbiamo già</span></div>
-        <div class="ftile p2"><span class="ft-day">15.07 · P2</span><span class="ft-title">3 look per te</span></div>
-        <div class="ftile p3"><span class="ft-day">17.07 · P3</span><span class="ft-title">MagSafe, cos'è</span></div>
-        <div class="ftile p2"><span class="ft-day">20.07 · P2</span><span class="ft-title">I colori dell'estate</span></div>
-        <div class="ftile p5"><span class="ft-day">22.07 · P5</span><span class="ft-title">Dietro OKKO</span></div>
-        <div class="ftile p3"><span class="ft-day">24.07 · P3</span><span class="ft-title">Quale cavo?</span></div>
-        <div class="ftile p1"><span class="ft-day">27.07 · P4</span><span class="ft-title">Il 3x2, onesto</span></div>
-        <div class="ftile p2"><span class="ft-day">29.07 · P2</span><span class="ft-title">MagSafe che piace</span></div>
-        <div class="ftile p1"><span class="ft-day">31.07 · P1</span><span class="ft-title">Sempre pronti</span></div>
+      <div class="feed-layout">
+        <div>
+          <div class="feedgrid" aria-label="Mockup del feed Instagram di luglio">
+            <div class="ftile p5"><span class="ft-day">6.07 · P5</span><span class="ft-title">Si riparte</span></div>
+            <div class="ftile p2"><span class="ft-day">8.07 · P2</span><span class="ft-title">La gamma</span></div>
+            <div class="ftile p3"><span class="ft-day">10.07 · P3</span><span class="ft-title">Il vetro giusto</span></div>
+            <div class="ftile p1"><span class="ft-day">13.07 · P1</span><span class="ft-title">Ce l'abbiamo già</span></div>
+            <div class="ftile p2"><span class="ft-day">15.07 · P2</span><span class="ft-title">3 look per te</span></div>
+            <div class="ftile p3"><span class="ft-day">17.07 · P3</span><span class="ft-title">MagSafe, cos'è</span></div>
+            <div class="ftile p2"><span class="ft-day">20.07 · P2</span><span class="ft-title">I colori dell'estate</span></div>
+            <div class="ftile p5"><span class="ft-day">22.07 · P5</span><span class="ft-title">Dietro OKKO</span></div>
+            <div class="ftile p3"><span class="ft-day">24.07 · P3</span><span class="ft-title">Quale cavo?</span></div>
+            <div class="ftile p1"><span class="ft-day">27.07 · P4</span><span class="ft-title">Il 3x2, onesto</span></div>
+            <div class="ftile p2"><span class="ft-day">29.07 · P2</span><span class="ft-title">MagSafe che piace</span></div>
+            <div class="ftile p1"><span class="ft-day">31.07 · P1</span><span class="ft-title">Sempre pronti</span></div>
+          </div>
+          <p class="feed-cap">Ogni post Instagram esce anche su Facebook (repurpose).<br>In parallelo: LinkedIn 1 post/sett (martedì) · TikTok 2/sett (mer/ven), qui sotto nel calendario.</p>
+        </div>
+        <figure class="feed-style">
+          <img src="./griglia-opzione-c.webp" width="680" height="1447" loading="lazy" alt="Lo stile reale del feed Instagram OKKO: griglia di prodotti su fondi teal, avorio e coral più foto reali, con la cadenza opzione C.">
+          <figcaption>Lo <strong>stile reale</strong> del feed — opzione C: lo sfondo dipende dal pillar, cadenza Teal&nbsp;→&nbsp;Avorio&nbsp;→&nbsp;Coral&nbsp;→&nbsp;Reale. <a href="./piano-editoriale-social.html#griglia">Come funziona →</a></figcaption>
+        </figure>
       </div>
-      <p class="feed-cap">Ogni post Instagram esce anche su Facebook (repurpose).<br>In parallelo: LinkedIn 1 post/sett (martedì) · TikTok 2/sett (mer/ven), qui sotto nel calendario.</p>
 
       <!-- ============ S1 ============ -->
       <div class="weekdiv" id="s1"><span class="wd-id">S1 · Rilancio</span><span class="wd-title">Ri-attivazione Instagram</span><span class="wd-date">lun 6 – dom 12 lug</span></div>
