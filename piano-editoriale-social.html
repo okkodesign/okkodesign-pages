@@ -303,17 +303,10 @@ tbody tr:hover td { background: var(--ivory); }
 .sw-coral { background: var(--accent); }
 .sw-real { background: linear-gradient(135deg, #C9A06A, #8A6F4E); }
 .ig-identity { display: grid; grid-template-columns: 360px 1fr; gap: 40px; align-items: center; margin: 8px 0 0; }
-.ig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; border: 1px solid var(--border); border-radius: 12px; padding: 6px; background: var(--white); }
-.ig-tile { position: relative; aspect-ratio: 4/5; border-radius: 4px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.ig-tile .ring { width: 42%; aspect-ratio: 1; border-radius: 50%; border: 2px solid rgba(0,0,0,0.16); }
-.ig-tile .plab { position: absolute; left: 5px; top: 5px; font-family: var(--font-mono); font-size: 9px; font-weight: 600; padding: 1px 5px; border-radius: 4px; background: rgba(0,0,0,0.30); color: #fff; letter-spacing: 0.04em; }
-.t-teal { background: var(--primary); } .t-teal .ring { border-color: rgba(255,255,255,0.38); }
-.t-avorio { background: var(--ivory); } .t-avorio .ring { border-color: rgba(0,0,0,0.16); } .t-avorio .plab { background: rgba(0,0,0,0.42); }
-.t-coral { background: var(--accent); } .t-coral .ring { border-color: rgba(255,255,255,0.42); }
-.t-real { background: linear-gradient(160deg, #D6C29E, #B4986F); } .t-real .ring { border-color: rgba(255,255,255,0.45); }
+.ig-feed { width: 100%; height: auto; display: block; border-radius: 16px; box-shadow: 0 22px 52px -32px rgba(28,59,60,0.5); }
 .ig-caption { font-size: 14.5px; color: var(--ink-soft); line-height: 1.55; }
 .ig-caption strong { color: var(--ink); }
-@media (max-width: 920px) { .ig-identity { grid-template-columns: 1fr; gap: 24px; } .ig-grid { max-width: 320px; } }
+@media (max-width: 920px) { .ig-identity { grid-template-columns: 1fr; gap: 24px; } .ig-feed { max-width: 340px; margin: 0 auto; } }
 
 /* ---- Footer --------------------------------------------------------- */
 .site-footer { background: var(--ink); color: var(--white); margin-top: 100px; }
@@ -581,23 +574,8 @@ tbody tr:hover td { background: var(--ivory); }
         <span class="cad-chip"><span class="cad-sw sw-real"></span>Reale</span><span class="cad-arrow" title="si ripete">↻</span>
       </div>
       <div class="ig-identity">
-        <div class="ig-grid" role="img" aria-label="Esempio di griglia Instagram generata dalla cadenza di quattro colori, che scorre creando morbide diagonali">
-          <div class="ig-tile t-teal"><span class="plab">P2</span><span class="ring"></span></div>
-          <div class="ig-tile t-avorio"><span class="plab">P1</span><span class="ring"></span></div>
-          <div class="ig-tile t-coral"><span class="plab">P4</span><span class="ring"></span></div>
-          <div class="ig-tile t-real"><span class="plab">P5</span><span class="ring"></span></div>
-          <div class="ig-tile t-teal"><span class="plab">P2</span><span class="ring"></span></div>
-          <div class="ig-tile t-avorio"><span class="plab">P3</span><span class="ring"></span></div>
-          <div class="ig-tile t-coral"><span class="plab">P4</span><span class="ring"></span></div>
-          <div class="ig-tile t-real"><span class="plab">P5</span><span class="ring"></span></div>
-          <div class="ig-tile t-teal"><span class="plab">P2</span><span class="ring"></span></div>
-          <div class="ig-tile t-avorio"><span class="plab">P1</span><span class="ring"></span></div>
-          <div class="ig-tile t-coral"><span class="plab">P4</span><span class="ring"></span></div>
-          <div class="ig-tile t-real"><span class="plab">P5</span><span class="ring"></span></div>
-          <div class="ig-tile t-teal"><span class="plab">P2</span><span class="ring"></span></div>
-          <div class="ig-tile t-avorio"><span class="plab">P3</span><span class="ring"></span></div>
-          <div class="ig-tile t-coral"><span class="plab">P4</span><span class="ring"></span></div>
-        </div>
+        <img class="ig-feed" src="./griglia-opzione-c.webp" width="680" height="1447" loading="lazy" alt="Esempio di feed Instagram OKKO con la cadenza opzione C: griglia di prodotti su fondi teal, avorio e coral più foto reali, che scorrono creando morbide diagonali di colore.">
+
         <p class="ig-caption"><strong>Come si legge:</strong> il ciclo di quattro colori scorre nella griglia a tre colonne creando <strong>morbide diagonali</strong> — un ritmo cromatico regolare ma mai forzato. Il <strong>teal</strong> (P2) resta il filo conduttore, il <strong>coral</strong> (P4) torna una volta ogni quattro post: l'offerta pesa poco, come vuole il tono OKKO. Semplice da eseguire, senza vincoli di posizione.</p>
       </div>
 
