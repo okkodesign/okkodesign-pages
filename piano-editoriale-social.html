@@ -293,6 +293,28 @@ tbody tr:hover td { background: var(--ivory); }
 .week ul { margin: 4px 0 0; }
 .week li { font-size: 14.5px; color: var(--ink-soft); margin: 6px 0; }
 
+/* ---- Griglia IG: cadenza colori ------------------------------------- */
+.cadence { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 14px 0 28px; }
+.cad-chip { display: inline-flex; align-items: center; gap: 9px; border: 1px solid var(--border); background: var(--white); border-radius: 8px; padding: 8px 13px; font-size: 14px; font-weight: 600; color: var(--ink); }
+.cad-sw { width: 15px; height: 15px; border-radius: 4px; flex: none; }
+.cad-arrow { color: var(--border-strong); font-weight: 700; }
+.sw-teal { background: var(--primary); }
+.sw-avorio { background: var(--ivory); border: 1px solid var(--border-strong); }
+.sw-coral { background: var(--accent); }
+.sw-real { background: linear-gradient(135deg, #C9A06A, #8A6F4E); }
+.ig-identity { display: grid; grid-template-columns: 360px 1fr; gap: 40px; align-items: center; margin: 8px 0 0; }
+.ig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; border: 1px solid var(--border); border-radius: 12px; padding: 6px; background: var(--white); }
+.ig-tile { position: relative; aspect-ratio: 4/5; border-radius: 4px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.ig-tile .ring { width: 42%; aspect-ratio: 1; border-radius: 50%; border: 2px solid rgba(0,0,0,0.16); }
+.ig-tile .plab { position: absolute; left: 5px; top: 5px; font-family: var(--font-mono); font-size: 9px; font-weight: 600; padding: 1px 5px; border-radius: 4px; background: rgba(0,0,0,0.30); color: #fff; letter-spacing: 0.04em; }
+.t-teal { background: var(--primary); } .t-teal .ring { border-color: rgba(255,255,255,0.38); }
+.t-avorio { background: var(--ivory); } .t-avorio .ring { border-color: rgba(0,0,0,0.16); } .t-avorio .plab { background: rgba(0,0,0,0.42); }
+.t-coral { background: var(--accent); } .t-coral .ring { border-color: rgba(255,255,255,0.42); }
+.t-real { background: linear-gradient(160deg, #D6C29E, #B4986F); } .t-real .ring { border-color: rgba(255,255,255,0.45); }
+.ig-caption { font-size: 14.5px; color: var(--ink-soft); line-height: 1.55; }
+.ig-caption strong { color: var(--ink); }
+@media (max-width: 920px) { .ig-identity { grid-template-columns: 1fr; gap: 24px; } .ig-grid { max-width: 320px; } }
+
 /* ---- Footer --------------------------------------------------------- */
 .site-footer { background: var(--ink); color: var(--white); margin-top: 100px; }
 .site-footer .container {
@@ -353,6 +375,7 @@ tbody tr:hover td { background: var(--ivory); }
       <a href="#audience">Canali</a>
       <a href="#pillar">Pillar</a>
       <a href="#b2c">B2C</a>
+      <a href="#griglia">Griglia</a>
       <a href="#b2b">LinkedIn</a>
       <a href="#rilancio">Rilancio</a>
       <a href="#roadmap">Roadmap</a>
@@ -530,6 +553,52 @@ tbody tr:hover td { background: var(--ivory); }
           <tr><td>Facebook</td><td>Reach, click al sito</td><td>Reazioni / commenti</td></tr>
         </tbody>
       </table>
+      </div>
+
+      <h2 id="griglia">L'identità della griglia Instagram</h2>
+      <p class="lead">Instagram si guarda prima dalla griglia che dal singolo post. Per questo lo sfondo di ogni creatività non è casuale: il colore <strong>dipende dal pillar</strong> — il color blocking è la firma OKKO — e si pubblica seguendo una <strong>cadenza fissa di colori</strong>. Il feed diventa riconoscibile a colpo d'occhio, prima ancora di aprire il post.</p>
+
+      <h4>Colore = pillar</h4>
+      <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Pillar</th><th>Sfondo</th><th>Perché</th></tr></thead>
+        <tbody>
+          <tr><td><strong>P1</strong> · Ce l'abbiamo già</td><td>Avorio</td><td>reveal pulito del modello nuovo, in chiaro</td></tr>
+          <tr><td><strong>P2</strong> · Cambia look</td><td>Teal <code>#2F6364</code></td><td>colore-firma OKKO, il pillar più frequente</td></tr>
+          <tr><td><strong>P3</strong> · Sai sceglierla</td><td>Avorio</td><td>chiaro = massima leggibilità (carosello)</td></tr>
+          <tr><td><strong>P4</strong> · La promo giusta</td><td>Coral</td><td>l'unico acceso, raro (≤¼): l'accento offerta</td></tr>
+          <tr><td><strong>P5</strong> · Fatto in Italia</td><td>Foto reale</td><td>texture umana, rompe il ritmo studio</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h4>La cadenza di pubblicazione</h4>
+      <p>Nessuna griglia rigida da comporre a blocchi, nessun vincolo di pubblicare più post insieme: si pubblica sempre in quest'ordine, poi si ricomincia da capo.</p>
+      <div class="cadence" role="img" aria-label="Cadenza colori: Teal, poi Avorio, poi Coral, poi Reale, e si ripete">
+        <span class="cad-chip"><span class="cad-sw sw-teal"></span>Teal</span><span class="cad-arrow">→</span>
+        <span class="cad-chip"><span class="cad-sw sw-avorio"></span>Avorio</span><span class="cad-arrow">→</span>
+        <span class="cad-chip"><span class="cad-sw sw-coral"></span>Coral</span><span class="cad-arrow">→</span>
+        <span class="cad-chip"><span class="cad-sw sw-real"></span>Reale</span><span class="cad-arrow" title="si ripete">↻</span>
+      </div>
+      <div class="ig-identity">
+        <div class="ig-grid" role="img" aria-label="Esempio di griglia Instagram generata dalla cadenza di quattro colori, che scorre creando morbide diagonali">
+          <div class="ig-tile t-teal"><span class="plab">P2</span><span class="ring"></span></div>
+          <div class="ig-tile t-avorio"><span class="plab">P1</span><span class="ring"></span></div>
+          <div class="ig-tile t-coral"><span class="plab">P4</span><span class="ring"></span></div>
+          <div class="ig-tile t-real"><span class="plab">P5</span><span class="ring"></span></div>
+          <div class="ig-tile t-teal"><span class="plab">P2</span><span class="ring"></span></div>
+          <div class="ig-tile t-avorio"><span class="plab">P3</span><span class="ring"></span></div>
+          <div class="ig-tile t-coral"><span class="plab">P4</span><span class="ring"></span></div>
+          <div class="ig-tile t-real"><span class="plab">P5</span><span class="ring"></span></div>
+          <div class="ig-tile t-teal"><span class="plab">P2</span><span class="ring"></span></div>
+          <div class="ig-tile t-avorio"><span class="plab">P1</span><span class="ring"></span></div>
+          <div class="ig-tile t-coral"><span class="plab">P4</span><span class="ring"></span></div>
+          <div class="ig-tile t-real"><span class="plab">P5</span><span class="ring"></span></div>
+          <div class="ig-tile t-teal"><span class="plab">P2</span><span class="ring"></span></div>
+          <div class="ig-tile t-avorio"><span class="plab">P3</span><span class="ring"></span></div>
+          <div class="ig-tile t-coral"><span class="plab">P4</span><span class="ring"></span></div>
+        </div>
+        <p class="ig-caption"><strong>Come si legge:</strong> il ciclo di quattro colori scorre nella griglia a tre colonne creando <strong>morbide diagonali</strong> — un ritmo cromatico regolare ma mai forzato. Il <strong>teal</strong> (P2) resta il filo conduttore, il <strong>coral</strong> (P4) torna una volta ogni quattro post: l'offerta pesa poco, come vuole il tono OKKO. Semplice da eseguire, senza vincoli di posizione.</p>
       </div>
 
       <h2 id="b2b">Playbook B2B — LinkedIn</h2>
